@@ -13,9 +13,13 @@ const app = express();
 dbConnectionCheck();
 
 // тут импорты всех роутов, если нужно
+
+const tariffsRoute = require('./routes/tariffsRoute')
+
 const mainPageRoutes = require('./routes/mainPageRoutes');
 const loginRoutes = require('./routes/loginRoutes');
 /* const signUpRoutes = require('./routes/signUpRoutes') */
+
 
 app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, '../public/'))); // для подключения «клиентских» файлов, хранящихся в / public
@@ -55,6 +59,7 @@ app.get('/logout', async (req, res) => {
 // ссылки на роуты
 app.use('/', mainPageRoutes);
 app.use('/login', loginRoutes);
+app.use('/tariffs', tariffsRoute);
 /* app.use('/signup', signUpRoutes) */
 app.listen(PORT ?? 3100, () => {
   console.log('Сервер запущен!');

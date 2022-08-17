@@ -1,0 +1,66 @@
+.card-title-tariffs{
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.tariffsId{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    padding-bottom: 20px
+}
+
+.card-text-title{
+    font-weight: bold
+}
+
+.mainDivTar{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: stretch;
+}
+
+.card-body{
+
+    padding-top: 15px;
+}
+
+#bothbuttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+#headercolor{
+    background-color: rgb(163, 255, 71);
+    border-bottom: solid;
+}
+
+#tableprice{
+    max-width: 1400px;
+    border: ridge;
+}
+
+#divfortable{
+    display: flex;
+    justify-content: space-around;
+}
+
+#tigerimg{
+    display: flex;
+    justify-content: space-around;
+}
+
+h3{
+    font-family: cursive;
+}
+
+h4, th, td{
+    font-family: cursive;
+    font-size: 20px;
+}
+
