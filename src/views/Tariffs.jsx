@@ -4,9 +4,9 @@ const Layout = require('./Layout');
 function Tariffs({ prices, admin }) {
 
   return (
-    <Layout>
+    <Layout admin={admin}>
 
-        { !admin ? (
+        { admin ? (
           <>
            <div id="tigerimg">
       <img src="/img/tiger.gif" alt="tiger" id="tiger"/>

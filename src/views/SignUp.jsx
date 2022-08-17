@@ -1,4 +1,4 @@
-/* const React = require('react');
+const React = require('react');
 const Layout = require('./Layout');
 
 module.exports = function SignUp() {
@@ -19,4 +19,4 @@ module.exports = function SignUp() {
       </div>
     </Layout>
   );
-}; */
+}; 

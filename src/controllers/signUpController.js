@@ -1,4 +1,4 @@
-/* const bcrypt = require('bcrypt');
+const bcrypt = require('bcrypt');
 
 const renderTemplate = require('../lib/renderTemplate');
 const SignUp = require('../views/SignUp');
@@ -23,4 +23,4 @@ const createAdmin = async (req, res) => {
   }
 };
 
-module.exports = { renderSignUp, createAdmin }; */ */
+module.exports = { renderSignUp, createAdmin }; 
