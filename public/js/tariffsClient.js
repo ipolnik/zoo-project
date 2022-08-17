@@ -4,13 +4,20 @@ const tarForm = document.querySelector('.formTariffs');
 const deleteButton = document.querySelectorAll('.deletebutton');
 
 const menu2 = document.getElementById('menu-2');
-const children = menu2.querySelectorAll('.nav-link');
-const { firstChild } = menu2;
-firstChild.className = 'nav-link';
-children[2].className = 'nav-link active';
-
-const { lastElementChild } = menu2;
-menu2.removeChild(lastElementChild)
+const menu1 = document.getElementById('menu-1');
+if (menu2) {
+  const children = menu2.querySelectorAll('.nav-link');
+  const { firstChild } = menu2;
+  firstChild.className = 'nav-link';
+  children[2].className = 'nav-link active';
+  const { lastElementChild } = menu2;
+  menu2.removeChild(lastElementChild);
+}
+if (menu1) {
+  const children = menu1.querySelectorAll('.nav-link');
+  children[0].className = 'nav-link';
+  children[2].className = 'nav-link active';
+}
 
 mainDiv?.addEventListener('click', async (event) => {
   if (event.target.className === 'btn btn-primary') {
