@@ -15,7 +15,7 @@ dbConnectionCheck();
 // тут импорты всех роутов, если нужно
 
 const tariffsRoute = require('./routes/tariffsRoute')
-
+const homeRoutes = require('./routes/homeRoutes')
 const mainPageRoutes = require('./routes/mainPageRoutes');
 const loginRoutes = require('./routes/loginRoutes');
 const signUpRoutes = require('./routes/signUpRoutes')
@@ -57,6 +57,7 @@ app.get('/logout', async (req, res) => {
 });
 
 // ссылки на роуты
+app.use('/home', homeRoutes)
 app.use('/', mainPageRoutes);
 app.use('/login', loginRoutes);
 app.use('/tariffs', tariffsRoute);
