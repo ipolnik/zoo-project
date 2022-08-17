@@ -98,6 +98,9 @@ links?.addEventListener('click', (e) => {
     window.location.assign('/animals');
   }
   if (e.target.tagName === 'A' && e.target.innerHTML === 'Тарифы') {
+    const children = menu2.querySelectorAll('.nav-link');
+    console.log(children)
+    children[2].className = 'nav-link active';
     window.location.assign('/tariffs');
   }
   if (e.target.tagName === 'A' && e.target.innerHTML === 'Как нас найти?') {
