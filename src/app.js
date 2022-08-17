@@ -14,12 +14,12 @@ dbConnectionCheck();
 
 // тут импорты всех роутов, если нужно
 
-const tariffsRoute = require('./routes/tariffsRoute')
-const homeRoutes = require('./routes/homeRoutes')
+const tariffsRoute = require('./routes/tariffsRoute');
+const homeRoutes = require('./routes/homeRoutes');
 const mainPageRoutes = require('./routes/mainPageRoutes');
 const loginRoutes = require('./routes/loginRoutes');
-const signUpRoutes = require('./routes/signUpRoutes')
-
+const signUpRoutes = require('./routes/signUpRoutes');
+const listeRoute = require('./routes/listeRoute');
 
 app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, '../public/'))); // для подключения «клиентских» файлов, хранящихся в / public
@@ -57,11 +57,12 @@ app.get('/logout', async (req, res) => {
 });
 
 // ссылки на роуты
-app.use('/home', homeRoutes)
+app.use('/home', homeRoutes);
 app.use('/', mainPageRoutes);
 app.use('/login', loginRoutes);
 app.use('/tariffs', tariffsRoute);
 app.use('/signup', signUpRoutes);
+app.use('', listeRoute);
 app.listen(PORT ?? 3100, () => {
   console.log('Сервер запущен!');
 });

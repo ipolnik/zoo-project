@@ -1,0 +1,49 @@
+/**************************************************CARD**********************************************/
+.card-deck{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 100%;
+ 
+  margin: 0 auto;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  min-width: 30%;
+  min-height: 30%;
+}
+.img-div {
+  max-height: 300px;
+  text-align: -webkit-center;
+  max-width: 250px;
+  justify-content: center;
+  align-self: center;
+  text-align: center;
+
+}
+.card img {
+  max-width:100%;
+  max-height:100%;
+}
+
+.card-img-top{
+  width: 100%;
+}
+
+.card {
+  margin-top: 100px;
+}
+.btn-upload {
+    padding: 10px 20px;
+    margin-left: 10px;
+}
+.upload-input-group {
+    margin-bottom: 10px;
+}
+
+.input-group>.custom-select:not(:last-child), .input-group>.form-control:not(:last-child) {
+  height: 45px;
+}

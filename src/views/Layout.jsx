@@ -9,6 +9,7 @@ module.exports = function Layout({ children, admin }) {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossOrigin="anonymous" />
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossOrigin="anonymous" />
         <link rel="stylesheet" href="/styles/mainpage.css" />
+        <link rel="stylesheet" href="/styles/style.css" />
         <title>Zoo!</title>
       </head>
       <body>
@@ -24,7 +25,7 @@ module.exports = function Layout({ children, admin }) {
                   <div className="navbar-nav" id="menu-1">
                     <a className="navbar-brand" href="#">Admin version</a>
                     <a className="nav-link active" aria-current="page" href="/">Главная страница</a>
-                    <a className="nav-link" href="/animals">Животные</a>
+                    <a className="nav-link" href="/list">Животные</a>
                     <a className="nav-link" href="/tariffs">Тарифы</a>
                     <a className="nav-link" href="/location">Как нас найти?</a>
                     <a className="nav-link" href="/logout" id="logout_id">Выйти</a>
@@ -34,7 +35,7 @@ module.exports = function Layout({ children, admin }) {
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                   <div className="navbar-nav" id="menu-2">
                     <a className="nav-link active" aria-current="page" href="/">Главная страница</a>
-                    <a className="nav-link" href="/animals">Животные</a>
+                    <a className="nav-link" href="/list">Животные</a>
                     <a className="nav-link" href="/prices">Тарифы</a>
                     <a className="nav-link" href="/location">Как нас найти?</a>
                     <a className="nav-link" href="/login" id="login_id">Вход</a>

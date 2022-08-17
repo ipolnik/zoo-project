@@ -95,11 +95,11 @@ links?.addEventListener('click', (e) => {
     }
   }
   if (e.target.tagName === 'A' && e.target.innerHTML === 'Животные') {
-    window.location.assign('/animals');
+    window.location.assign('/list');
   }
   if (e.target.tagName === 'A' && e.target.innerHTML === 'Тарифы') {
     const children = menu2.querySelectorAll('.nav-link');
-    console.log(children)
+    console.log(children);
     children[2].className = 'nav-link active';
     window.location.assign('/tariffs');
   }
