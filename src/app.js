@@ -17,6 +17,7 @@ dbConnectionCheck();
 // const indexRoutes = require('./routes/indexRoutes');
 // const loginRoutes = require('./routes/loginRoutes');
 // const regRoutes = require('./routes/regRoutes');
+const tariffsRoute = require('./routes/tariffsRoute')
 
 app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, '../public/'))); // для подключения «клиентских» файлов, хранящихся в / public
@@ -42,6 +43,7 @@ app.use(session(sessionConfig));
 // app.use('/', indexRoutes);
 // app.use('/login', loginRoutes);
 // app.use('/register', regRoutes);
+app.use('/tariffs', tariffsRoute)
 
 app.get('/', (req, res) => {
   renderTemplate(Home, null, res);

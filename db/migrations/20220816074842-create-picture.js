@@ -12,7 +12,7 @@ module.exports = {
         type: Sequelize.INTEGER,
         references: {
           model: 'Animals',
-          key: 'id'
+          key: 'id'}
       },
       picture_link: {
         type: Sequelize.STRING
