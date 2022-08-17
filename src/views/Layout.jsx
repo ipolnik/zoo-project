@@ -25,7 +25,7 @@ module.exports = function Layout({ children, admin }) {
                     <a className="navbar-brand" href="#">Admin version</a>
                     <a className="nav-link active" aria-current="page" href="/">Главная страница</a>
                     <a className="nav-link" href="/animals">Животные</a>
-                    <a className="nav-link" href="/prices">Тарифы</a>
+                    <a className="nav-link" href="/tariffs">Тарифы</a>
                     <a className="nav-link" href="/location">Как нас найти?</a>
                     <a className="nav-link" href="/logout" id="logout_id">Выйти</a>
                   </div>

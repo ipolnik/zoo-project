@@ -27,6 +27,7 @@ links?.addEventListener('click', (e) => {
           <input name="password" type="password" className="form-control" placeholder="Password" id="exampleInputPassword1" />
         </div>
         <button type="submit" className="btn btn-primary" id="submit">Войти</button>
+        <div><a href="/signup">Нет аккаунта? Зарегистрируйся!</a></div>
     `;
     block.append(loginBlock);
 
@@ -97,7 +98,7 @@ links?.addEventListener('click', (e) => {
     window.location.assign('/animals');
   }
   if (e.target.tagName === 'A' && e.target.innerHTML === 'Тарифы') {
-    window.location.assign('/prices');
+    window.location.assign('/tariffs');
   }
   if (e.target.tagName === 'A' && e.target.innerHTML === 'Как нас найти?') {
     window.location.assign('/location');
