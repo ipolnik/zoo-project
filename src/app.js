@@ -6,7 +6,6 @@ const session = require('express-session');
 const FileStore = require('session-file-store')(session);
 const renderTemplate = require('./lib/renderTemplate');
 const dbConnectionCheck = require('../db/dbConnectCheck');
-const Home = require('./views/Home');
 
 const { PORT, SESSION_SECRET } = process.env;
 
@@ -14,9 +13,9 @@ const app = express();
 dbConnectionCheck();
 
 // тут импорты всех роутов, если нужно
-// const indexRoutes = require('./routes/indexRoutes');
-// const loginRoutes = require('./routes/loginRoutes');
-// const regRoutes = require('./routes/regRoutes');
+const mainPageRoutes = require('./routes/mainPageRoutes');
+const loginRoutes = require('./routes/loginRoutes');
+/* const signUpRoutes = require('./routes/signUpRoutes') */
 
 app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, '../public/'))); // для подключения «клиентских» файлов, хранящихся в / public
@@ -35,18 +34,28 @@ const sessionConfig = {
     httpOnly: true, // * куки только по http
   },
 };
-	// подключение мидлвара для куки
+// подключение мидлвара для куки
 app.use(session(sessionConfig));
 
-// ссылки на роуты
-// app.use('/', indexRoutes);
-// app.use('/login', loginRoutes);
-// app.use('/register', regRoutes);
-
-app.get('/', (req, res) => {
-  renderTemplate(Home, null, res);
+app.get('/logout', async (req, res) => {
+  try {
+    if (req.session.admin) {
+      req.session.destroy(() => {
+        res.clearCookie('Cookie');
+        res.redirect('/');
+      });
+    } else {
+      res.redirect('/');
+    }
+  } catch (error) {
+    res.send(`Error ------> ${error}`);
+  }
 });
 
+// ссылки на роуты
+app.use('/', mainPageRoutes);
+app.use('/login', loginRoutes);
+/* app.use('/signup', signUpRoutes) */
 app.listen(PORT ?? 3100, () => {
   console.log('Сервер запущен!');
 });
