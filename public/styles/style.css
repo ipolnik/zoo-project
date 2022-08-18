@@ -1,11 +1,11 @@
-.card-title-tariffs{
+.card-title-tariffs {
     display: flex;
     flex-direction: column-reverse;
     flex-wrap: wrap;
     align-content: center;
 }
 
-.tariffsId{
+.tariffsId {
     width: 400px;
     display: flex;
     flex-direction: column;
@@ -14,53 +14,52 @@
     padding-bottom: 20px
 }
 
-.card-text-title{
+.card-text-title {
     font-weight: bold
 }
 
-.mainDivTar{
+.mainDivTar {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-content: stretch;
 }
 
-.card-body{
+.card-body {
 
     padding-top: 15px;
 }
 
-#bothbuttons{
+#bothbuttons {
     display: flex;
     justify-content: space-between;
 }
 
-#headercolor{
+#headercolor {
     background-color: rgb(253, 205, 71);
     border-bottom: solid;
 }
 
-#tableprice{
+#tableprice {
     max-width: 1400px;
     border: ridge;
 }
 
-#divfortable{
+#divfortable {
     display: flex;
     justify-content: space-around;
 }
 
-#tigerimg{
+#tigerimg {
     display: flex;
     justify-content: space-around;
 }
 
-th, td{
-    font-family: cursive;
+th,
+td {
     font-size: 20px;
 }
 
-.form-control{
+.form-control {
     background-color: rgb(228, 227, 227);
 }
-
