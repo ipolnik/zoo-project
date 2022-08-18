@@ -5,7 +5,7 @@ const card = document.querySelector('.card-deck');
 card.addEventListener('click', (e) => {
   if (e.target.tagName === 'BUTTON') {
     return
-  } else {
+  } else if (e.target.tagName !== 'DIV') {
     window.location.assign(`/animalcard/${e.target.id}`);
   }
 });
