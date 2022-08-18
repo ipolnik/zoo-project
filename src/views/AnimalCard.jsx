@@ -50,8 +50,10 @@ module.exports = function AnimalCard({
         ) : ('')}
 
         <div className="card-body">
-          <h5 className="card-title">{ animal.breed }</h5>
-          <p className="card-text">{ animal.description }</p>
+          <h5 className="card-title">{animal.breed}</h5>
+          <div className="card-text-container">
+            <p className="card-text">{animal.description}</p>
+          </div>
           <p className="card-text">
             <small className="text-muted">
               Last updated:

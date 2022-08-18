@@ -11,14 +11,13 @@
 }
 
 .delete-confirm {
-  /* background-color: rgb(237, 237, 237);
-  border-radius: 10%; */
   width: 250px;
   height: 150px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   padding: 10px 20px;
+  border: 2px solid #b67c0d99;
 }
 
 .delete-confirm-text {
@@ -31,7 +30,7 @@
 }
 
 .main-content {
-  padding: 2% 0 3%;
+  /* padding: 0 0 3%; */
 }
 
 h3 {
