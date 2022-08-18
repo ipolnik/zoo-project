@@ -3,11 +3,7 @@
 }
 
 .nav-link:hover{
-  color:rgb(233, 195, 126)
-}
-
-.bg-light {
-  background-color: rgb(233, 195, 126);
+  color: rgb(94,57,41);
 }
 
 .navbar {
@@ -16,7 +12,8 @@
 
 .navbar-nav .nav-link.active {
   font-size: 21px;
-  color:rgb(233, 195, 126);
+  color: rgb(51, 31, 22);
+  /* color:rgb(233, 195, 126); */
 }
 
 .navbar-brand {
@@ -154,4 +151,8 @@ body{
   background-color: rgb(243, 213, 158) !important;
   color: rgb(0, 0, 0);
   text-align: center;
+
+.map {
+  margin: 0 0 40px 0;
 }
+

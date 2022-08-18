@@ -36,7 +36,7 @@
 }
 
 #headercolor{
-    background-color: rgb(163, 255, 71);
+    background-color: rgb(253, 205, 71);
     border-bottom: solid;
 }
 
@@ -58,5 +58,9 @@
 th, td{
     font-family: cursive;
     font-size: 20px;
+}
+
+.form-control{
+    background-color: rgb(228, 227, 227);
 }
 

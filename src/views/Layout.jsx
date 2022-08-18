@@ -18,6 +18,7 @@ module.exports = function Layout({ children, admin }) {
         <title>Zoo!</title>
       </head>
       <body>
+
         <div id="wrap">
           <header>
             <nav className="navbar navbar-expand-lg bg-light" id="navv">

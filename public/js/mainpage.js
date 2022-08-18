@@ -64,7 +64,7 @@ links?.addEventListener('click', (e) => {
         <a class="navbar-brand" href="#">Admin version</a>
           <a class="nav-link active" aria-current="page" href="/">Главная страница</a>
           <a class="nav-link" href="/animals">Животные</a>
-          <a class="nav-link" href="/prices">Тарифы</a>
+          <a class="nav-link" href="/tariffs">Тарифы</a>
           <a class="nav-link" href="/logout">Выйти</a>
         </div>`;
         navbar.removeChild(menu2);
