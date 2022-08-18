@@ -52,7 +52,12 @@ module.exports = function Layout({ children, admin }) {
         </header>
         {children}
       </body>
-      <footer />
+      <footer class="bg-light text-center text-lg-start" id="footermain">
+  <div class="text-center p-3">
+  <a class="text-dark" href="https://mdbootstrap.com/">Урюпинский Зоопарк</a>
+    © 2022 Copyright: Owls
+  </div>
+</footer>
       <script defer src="/js/mainpage.js" />
       <script defer src="/styles/mainpage.css" />
     </html>
