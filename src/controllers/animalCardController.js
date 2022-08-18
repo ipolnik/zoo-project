@@ -18,8 +18,8 @@ class AnimalCardController {
 
   async getCard(req, res) {
     try {
-      // const newUser = req.session?.newUser;
-      const newUser = 'Admin';
+      const newUser = req.session?.admin;
+      // const newUser = 'Admin';
       const animal = await Animal.findOne({ include: { model: Picture }, where: { id: req.params.id } });
       const pictures = animal.Pictures;
       const firstPic = pictures.shift();
@@ -33,8 +33,8 @@ class AnimalCardController {
 
   async deleteCard(req, res) {
     try {
-      // const newUser = req.session?.newUser;
-      const newUser = 'Admin';
+      const newUser = req.session?.admin;
+      // const newUser = 'Admin';
       if (newUser) {
         await Animal.destroy({ where: { id: req.params.id } });
         res.json({ isDeleteSuccessful: true });
@@ -48,8 +48,8 @@ class AnimalCardController {
 
   async getUpdateCard(req, res) {
     try {
-      // const newUser = req.session?.newUser;
-      const newUser = 'Admin';
+      const newUser = req.session?.admin;
+      // const newUser = 'Admin';
       const animal = await Animal.findOne({ include: { model: Picture }, where: { id: req.params.id } });
       const pictures = animal.Pictures;
       renderTemplate(EditAnimalCard, {
@@ -63,8 +63,8 @@ class AnimalCardController {
   async updateCard(req, res) {
     try {
       const { name, breed, description } = req.body;
-      // const newUser = req.session?.newUser;
-      const newUser = 'Admin';
+      const newUser = req.session?.admin;
+      // const newUser = 'Admin';
       // const animal = await Animal.findOne({ include: { model: Picture }, where: { id: req.params.id } });
       await Animal.update({
         name: name,
@@ -79,8 +79,8 @@ class AnimalCardController {
 
   async deletePic(req, res) {
     try {
-      // const newUser = req.session?.newUser;
-      const newUser = 'Admin';
+      const newUser = req.session?.admin;
+      // const newUser = 'Admin';
       if (newUser) {
         await Picture.destroy({ where: { id: req.params.id } });
         res.json({ isDeleteSuccessful: true });
