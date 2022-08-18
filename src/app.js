@@ -1,7 +1,7 @@
 require('dotenv').config();
 const path = require('path');
 const express = require('express');
-const morgan = require('morgan');
+//const morgan = require('morgan');
 const session = require('express-session');
 const FileStore = require('session-file-store')(session);
 // const renderTemplate = require('./lib/renderTemplate');
@@ -25,7 +25,7 @@ const signUpRoutes = require('./routes/signUpRoutes');
 const listeRoute = require('./routes/listeRoute');
 
 
-app.use(morgan('dev'));
+//app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, '../public/'))); // для подключения «клиентских» файлов, хранящихся в / public
 app.use(express.urlencoded({ extended: true })); // Для того, чтобы обрабатывать тела запросов, которые через метод POST
 app.use(express.json());
