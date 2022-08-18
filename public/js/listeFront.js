@@ -1,5 +1,10 @@
 const adminSet = document.querySelector('.admin');
 const addAnimal = document.querySelector('.addAnimal');
+const card = document.querySelector('.card-deck');
+
+card.addEventListener('click', (e) => {
+  window.location.assign(`/animalcard/${e.target.id}`);
+});
 
 adminSet.addEventListener('click', async (e) => {
   e.preventDefault();
@@ -20,7 +25,7 @@ adminSet.addEventListener('click', async (e) => {
   } else if (e.target.tagName === 'BUTTON' && e.target.className === 'btn btn-success') {
     const idAnimal = e.target.id;
 
-    window.location.assign(`/animalcard/${idAnimal}`);
+    window.location.assign(`/animalcard/${idAnimal}/edit`);
   }
 });
 addAnimal.addEventListener('click', (e) => {
