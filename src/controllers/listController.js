@@ -35,7 +35,8 @@ const deleteAnimal = async (req, res) => {
 };
 
 const addAnimal = async (req, res) => {
-  renderTemplate(Form, null, res);
+  const admin = req.session?.admin;
+  renderTemplate(Form, { admin }, res);
 };
 
 const postAddAnimal = async (req, res) => {

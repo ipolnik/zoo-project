@@ -1,5 +1,5 @@
 const checkAdmin = (req, res, next) => {
-  if (req.session.admin === 'Admin') {
+  if (req.session.admin) {
     next();
   } else {
     res.redirect('/');
