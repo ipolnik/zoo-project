@@ -20,7 +20,8 @@ function Tariffs({ prices, admin }) {
       <th scope="col">Доступные тарифы:</th>
       <th scope="col">Взрослые</th>
       <th scope="col">Дети</th>
-      <th scope="col">Пенсионеры</th>
+      <th scope="col">Пенсионеры</th>\
+      <th scope="col">Билеты</th>
     </tr>
   </thead >
   {prices?.map((el) => 
@@ -30,6 +31,7 @@ function Tariffs({ prices, admin }) {
       <td>{el.option1} руб.</td>
       <td>{el.option2} руб.</td>
       <td>{el.option3} руб.</td>
+      <td><a href="/tariffs/buy">Купить</a></td>
     </tr>
     </tbody>)}
 </table>
@@ -106,6 +108,7 @@ function Tariffs({ prices, admin }) {
       <th scope="col">Взрослые</th>
       <th scope="col">Дети</th>
       <th scope="col">Пенсионеры</th>
+      <th scope="col">Билеты</th>
     </tr>
   </thead >
   {prices?.map((el) => 
@@ -115,6 +118,7 @@ function Tariffs({ prices, admin }) {
       <td>{el.option1} руб.</td>
       <td>{el.option2} руб.</td>
       <td>{el.option3} руб.</td>
+      <td><a href="/tariffs/buy">Купить</a> </td>
     </tr>
     </tbody>)}
 </table>

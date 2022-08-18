@@ -1,4 +1,4 @@
-const { renderTariffs, updateTariffs, addTariff, deleteTariff } = require('../controllers/renderTariffs');
+const { renderTariffs, updateTariffs, addTariff, deleteTariff, renderPurchase } = require('../controllers/renderTariffs');
 
 const router = require('express').Router();
 
@@ -8,6 +8,8 @@ router
   .put('/', updateTariffs)
   .post('/', addTariff)
   .delete('/', deleteTariff)
+
+router.get('/buy', renderPurchase)
 
 
 module.exports = router;

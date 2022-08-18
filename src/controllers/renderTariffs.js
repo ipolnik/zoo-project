@@ -1,5 +1,6 @@
 const renderTemplate = require('../lib/renderTemplate');
 const Tariffs = require('../views/Tariffs');
+const BuyTickets = require('../views/BuyTickets')
 const { Price } = require('../../db/models')
 
 
@@ -48,5 +49,15 @@ const deleteTariff = async (req, res) => {
   }
 }
 
-  module.exports = { renderTariffs, updateTariffs, addTariff, deleteTariff};
+
+
+/// Purchase page
+
+const renderPurchase = async (req, res) => {
+  const prices = await Price.findAll({order: [['id']]});
+    renderTemplate(BuyTickets, {prices}, res);
+};
+
+
+  module.exports = { renderTariffs, updateTariffs, addTariff, deleteTariff, renderPurchase};
 

@@ -62,4 +62,10 @@ td {
 
 .form-control {
     background-color: rgb(228, 227, 227);
+<<<<<<< Updated upstream
+=======
+}
+
+.quantity_item{
+    width: 25px;
 }
