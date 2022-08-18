@@ -11,10 +11,10 @@ module.exports = function Layout({ children, admin }) {
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
         />
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossOrigin="anonymous" />
-        <link rel="stylesheet" href="/styles/mainpage.css" />
+        <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossOrigin="anonymous" />
         <link rel="stylesheet" href="/styles/style.css" />
         <link rel="stylesheet" href="/styles/edouard.css" />
+        <link rel="stylesheet" href="/styles/mainpage.css" />
         <title>Zoo!</title>
       </head>
       <body>
@@ -32,7 +32,6 @@ module.exports = function Layout({ children, admin }) {
                     <a className="nav-link active" aria-current="page" href="/">Главная страница</a>
                     <a className="nav-link" href="/list">Животные</a>
                     <a className="nav-link" href="/tariffs">Тарифы</a>
-                    <a className="nav-link" href="/location">Как нас найти?</a>
                     <a className="nav-link" href="/logout" id="logout_id">Выйти</a>
                   </div>
                 </div>
@@ -42,7 +41,6 @@ module.exports = function Layout({ children, admin }) {
                     <a className="nav-link active" aria-current="page" href="/">Главная страница</a>
                     <a className="nav-link" href="/list">Животные</a>
                     <a className="nav-link" href="/prices">Тарифы</a>
-                    <a className="nav-link" href="/location">Как нас найти?</a>
                     <a className="nav-link" href="/login" id="login_id">Вход</a>
                   </div>
                 </div>
