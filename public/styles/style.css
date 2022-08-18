@@ -79,3 +79,11 @@ td {
     flex-wrap: nowrap;
     justify-content: center;
 } 
+
+.plus-btn{
+    margin: 10px;
+}
+
+.minus-btn{
+    margin: 10px;
+}
