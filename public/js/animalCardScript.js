@@ -49,7 +49,7 @@ if (removeButton) {
         window.location = '/list';
       }
     } catch (error) {
-      console.log('Error ==========================> ', error);
+      console.log(error);
     }
   });
 }

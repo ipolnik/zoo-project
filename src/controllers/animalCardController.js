@@ -42,7 +42,7 @@ class AnimalCardController {
         res.redirect('/animalcard/1');
       }
     } catch (error) {
-      res.send(`Error =========================> ${error.message}`);
+      res.send(error);
     }
   }
 
@@ -67,9 +67,9 @@ class AnimalCardController {
       // const newUser = 'Admin';
       // const animal = await Animal.findOne({ include: { model: Picture }, where: { id: req.params.id } });
       await Animal.update({
-        name: name,
-        breed: breed,
-        description: description,
+        name,
+        breed,
+        description,
       }, { where: { id: req.params.id } });
       res.json('updated');
     } catch (error) {
