@@ -6,7 +6,7 @@ function Tariffs({ prices }) {
     <Layout >
    <link rel="stylesheet" href="/styles/style.css" />
    <div id="tigerimg">
-      <img src="/img/tiger.gif" alt="tiger" id="tiger"/>
+      <img src="/img/panda.gif" alt="tiger" id="tiger"/>
     </div>
     <br />
     <h3 className="card-title-tariffs">Купить Билеты:</h3>
