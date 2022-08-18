@@ -19,7 +19,7 @@ module.exports = function Layout({ children, admin }) {
       </head>
       <body>
         <header>
-          <nav className="navbar navbar-expand-lg bg-light" id="navv">
+          <nav className="navbar navbar-expand-lg bg-orange" id="navv">
             <img className="logo" src="img/logo.png" width="10%" />
             <div className="container-fluid">
               <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,7 +40,7 @@ module.exports = function Layout({ children, admin }) {
                   <div className="navbar-nav" id="menu-2">
                     <a className="nav-link active" aria-current="page" href="/">Главная страница</a>
                     <a className="nav-link" href="/list">Животные</a>
-                    <a className="nav-link" href="/prices">Тарифы</a>
+                    <a className="nav-link" href="/tariffs">Тарифы</a>
                     <a className="nav-link" href="/login" id="login_id">Вход</a>
                   </div>
                 </div>
