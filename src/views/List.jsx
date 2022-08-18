@@ -10,7 +10,7 @@ function List({ animals, admin }) {
       {admin ? (
         <>
           <div className="addAnimal">
-            <button type="button" className="btn-add-animal" id="addAnimal">Добавить собакена</button>
+            <button type="button" className="btn-add-animal" id="addAnimal">Добавить карточку животного</button>
           </div>
           <div className="card-deck admin">
             {animals.map((animal) => (
