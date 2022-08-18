@@ -1,4 +1,4 @@
-.div-animal-card-edit{
+.div-animal-card-edit {
   padding: 5%;
 }
 
@@ -119,6 +119,7 @@ form {
   flex-direction: column;
   justify-content: space-around;
   padding: 10px 20px;
+  border: 2px solid #b67c0d99;
 }
 
 .delete-confirm-text {
