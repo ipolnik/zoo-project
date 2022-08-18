@@ -1,3 +1,24 @@
+html,
+body {
+  height: 100%;
+}
+#wrap {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  padding-bottom: 100px;
+  flex: 1 1 auto;
+  /*Высота футера*/
+}
+footer {
+  margin-top: -100px;
+  /*Минус Высота футера*/
+  height: 100px;
+  /*Высота футера*/
+}
+
 .nav-link {
   color: rgb(94,57,41);
 }
