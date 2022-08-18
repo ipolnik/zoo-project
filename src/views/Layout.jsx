@@ -18,44 +18,50 @@ module.exports = function Layout({ children, admin }) {
         <title>Zoo!</title>
       </head>
       <body>
-        <header>
-          <nav className="navbar navbar-expand-lg bg-orange" id="navv">
-            <img className="logo" src="img/logo.png" width="10%" />
-            <div className="container-fluid">
-              <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon" />
-              </button>
-              {admin ? (
-                <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-                  <div className="navbar-nav" id="menu-1">
-                    <a className="navbar-brand" href="#">Admin version</a>
-                    <a className="nav-link active" aria-current="page" href="/">Главная страница</a>
-                    <a className="nav-link" href="/list">Животные</a>
-                    <a className="nav-link" href="/tariffs">Тарифы</a>
-                    <a className="nav-link" href="/logout" id="logout_id">Выйти</a>
+
+        <div id="wrap">
+          <header>
+            <nav className="navbar navbar-expand-lg bg-light" id="navv">
+              <img className="logo" src="img/logo.png" width="10%" />
+              <div className="container-fluid">
+                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                  <span className="navbar-toggler-icon" />
+                </button>
+                {admin ? (
+                  <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div className="navbar-nav" id="menu-1">
+                      <a className="navbar-brand" href="#">Admin version</a>
+                      <a className="nav-link active" aria-current="page" href="/">Главная страница</a>
+                      <a className="nav-link" href="/list">Животные</a>
+                      <a className="nav-link" href="/tariffs">Тарифы</a>
+                      <a className="nav-link" href="/logout" id="logout_id">Выйти</a>
+                    </div>
                   </div>
-                </div>
-              ) : (
-                <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-                  <div className="navbar-nav" id="menu-2">
-                    <a className="nav-link active" aria-current="page" href="/">Главная страница</a>
-                    <a className="nav-link" href="/list">Животные</a>
-                    <a className="nav-link" href="/tariffs">Тарифы</a>
-                    <a className="nav-link" href="/login" id="login_id">Вход</a>
+                ) : (
+                  <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div className="navbar-nav" id="menu-2">
+                      <a className="nav-link active" aria-current="page" href="/">Главная страница</a>
+                      <a className="nav-link" href="/list">Животные</a>
+                      <a className="nav-link" href="/tariffs">Тарифы</a>
+                      <a className="nav-link" href="/login" id="login_id">Вход</a>
+                    </div>
                   </div>
-                </div>
-              )}
+                )}
+              </div>
+            </nav>
+          </header>
+          <main>
+            {children}
+          </main>
+          <footer className="bg-light text-center text-lg-start" id="footermain">
+            <div className="text-center p-3">
+              <a className="text-dark" href="https://mdbootstrap.com/">Урюпинский Зоопарк</a>
+              © 2022 Copyright: Owls
             </div>
-          </nav>
-        </header>
-        {children}
+          </footer>
+        </div>
       </body>
-      <footer class="bg-light text-center text-lg-start" id="footermain">
-  <div class="text-center p-3">
-  <a class="text-dark" href="https://mdbootstrap.com/">Урюпинский Зоопарк</a>
-    © 2022 Copyright: Owls
-  </div>
-</footer>
+
       <script defer src="/js/mainpage.js" />
       <script defer src="/styles/mainpage.css" />
     </html>
