@@ -5,7 +5,7 @@ module.exports = function AnimalCard({
   animal, pictures, firstPic, newUser,
 }) {
   return (
-    <Layout>
+    <Layout admin={newUser}>
       <link rel="stylesheet" href="/styles/animalCard.css" />
       <script defer src="/js/animalCardScript.js"></script>
       <div className="delete-confirm-background">

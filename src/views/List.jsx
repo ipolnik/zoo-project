@@ -4,7 +4,7 @@ const Layout = require('./Layout');
 
 function List({ animals, newUser }) {
   return (
-    <Layout>
+    <Layout admin={newUser}>
       <script defer src="js/listeFront.js" />
       {newUser ? (
         <>
