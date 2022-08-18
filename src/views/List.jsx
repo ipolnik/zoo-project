@@ -14,11 +14,11 @@ function List({ animals, newUser }) {
           <div className="card-deck admin">
             {animals.map((animal) => (
               <div className="card animate__animated animate__pulse" id={animal.id}>
-                <img className="card-img-top" src={animal.Pictures[0]?.picture_link} alt="Card cap" />
-                <div className="card-body">
-                  <h5 className="card-title">{animal.name}</h5>
-                  <h3 className="card-title">{animal.breed}</h3>
-                  <p className="card-text">{animal.description}</p>
+                <img className="card-img-top" src={animal.Pictures[0]?.picture_link} alt="Card cap" id={animal.id} />
+                <div className="card-body" id={animal.id}>
+                  <h5 className="card-title" id={animal.id}>{animal.name}</h5>
+                  <h3 className="card-title" id={animal.id}>{animal.breed}</h3>
+                  <p className="card-text" id={animal.id}>{animal.description}</p>
                 </div>
                 <button type="button" name="edit" className="btn btn-success" id={animal.id}>Edit</button>
                 <button type="button" name="edit" className="btn btn-danger" id={animal.id}>Delete</button>
