@@ -2,9 +2,18 @@ const tariffsFormAdd = document.querySelector('.formTarAdd');
 const mainDiv = document.querySelector('.mainDivTar');
 const tarForm = document.querySelector('.formTariffs');
 const deleteButton = document.querySelectorAll('.deletebutton');
+const plusBtn = document.querySelector('.plus-btn');
+const minusBtn = document.querySelector('.minus-btn');
+const totalSum = document.querySelector('#total_sum')
+const ticketCounterAdult = document.querySelector('.quantity_item_adult');
+const ticketCounterKids = document.querySelector('.quantity_item_kid');
+const ticketCounterElder = document.querySelector('.quantity_item_elder');
+const tablePrice = document.querySelector('#tableprice');
+
 
 const menu2 = document.getElementById('menu-2');
 const menu1 = document.getElementById('menu-1');
+
 
 if (menu2) {
   const children = menu2.querySelectorAll('.nav-link');
@@ -111,3 +120,64 @@ tariffsFormAdd?.addEventListener('click', async (event) => {
     }
   }
 });
+
+
+
+let countAdult = 0;
+let countKids = 0;
+let countElder = 0;
+let totalPrice = 0;
+
+
+tablePrice.addEventListener('click', (event) => {
+  if(event.target.className === "plus-btn" ) {
+    console.log(event.target.dataset.age)
+     counterPlus(event.target.dataset.age)
+  }
+  if(event.target.className === "minus-btn"){
+  console.log(event.target.dataset.age)
+     counterMinus(event.target.dataset.age)
+  }
+});
+
+function counterPlus(type){
+  if(type === 'adult'){
+  countAdult++;
+  ticketCounterAdult.value = countAdult
+  totalPrice = totalSum.innerHTML = countAdult * document.querySelector(".price_item1").textContent + totalPrice
+  console.log(countAdult)
+  }
+  if(type === 'kid'){
+    countKids++;
+    ticketCounterKids.value = countKids
+   totalPrice = totalSum.innerHTML = countKids * document.querySelector(".price_item2").textContent + totalPrice
+    console.log(countKids)
+    }
+    if(type === 'elder'){
+      countElder++;
+      ticketCounterElder.value = countElder
+      totalPrice = totalSum.innerHTML = countElder * document.querySelector(".price_item3").textContent + totalPrice
+      console.log(countElder)
+      }
+}
+
+function counterMinus(type){
+  if(type === 'adult'){
+  countAdult--;
+  ticketCounterAdult.value = countAdult
+  totalPrice = totalSum.innerHTML = countAdult * document.querySelector(".price_item1").textContent - totalPrice
+  console.log(countAdult)
+  }
+  if(type === 'kid'){
+    countKids--;
+    ticketCounterKids.value = countKids
+    totalPrice = totalSum.innerHTML = countKids * document.querySelector(".price_item2").textContent - totalPrice
+    console.log(countKids)
+    }
+    if(type === 'elder'){
+      countElder--;
+      ticketCounterElder.value = countElder
+      totalPrice = totalSum.innerHTML = countElder * document.querySelector(".price_item3").textContent - totalPrice;
+      console.log(countElder)
+      }
+}

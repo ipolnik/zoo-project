@@ -20,7 +20,7 @@ function Tariffs({ prices, admin }) {
       <th scope="col">Доступные тарифы:</th>
       <th scope="col">Взрослые</th>
       <th scope="col">Дети</th>
-      <th scope="col">Пенсионеры</th>\
+      <th scope="col">Пенсионеры</th>
       <th scope="col">Билеты</th>
     </tr>
   </thead >
