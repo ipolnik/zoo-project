@@ -73,6 +73,7 @@ footer {
   background-color: rgb(233, 195, 126);
   overflow: hidden;
   margin-top: 50px;
+  min-width: 200px;
   opacity: 1;
   visibility: visible;
   -webkit-transition: all .3s ease;

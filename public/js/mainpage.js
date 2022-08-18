@@ -20,15 +20,15 @@ links?.addEventListener('click', (e) => {
     loginBlock.classList.add('loginBlock');
     loginBlock.innerHTML = `
     <form action="/login" method="POST" id="log">
-        <div className="mb-3">
-          <label htmlFor="exampleInputLogin1" className="form-label"></label>
-          <input name="login" type="text" className="form-control" placeholder="Login" id="exampleInputLogin1" aria-describedby="emailHelp" />
+        <div class="mb-3">
+          <label htmlFor="exampleInputLogin1" class="form-label"></label>
+          <input name="login" type="text" class="form-control" placeholder="Login" id="exampleInputLogin1" aria-describedby="emailHelp" />
         </div>
-        <div className="mb-3">
-          <label htmlFor="exampleInputPassword1" className="form-label"></label>
-          <input name="password" type="password" className="form-control" placeholder="Password" id="exampleInputPassword1" />
+        <div class="mb-3">
+          <label htmlFor="exampleInputPassword1" class="form-label"></label>
+          <input name="password" type="password" class="form-control" placeholder="Password" id="exampleInputPassword1" />
         </div>
-        <button type="submit" className="btn btn-primary" id="submit">Войти</button>
+        <button type="submit" class="btn btn-primary" id="submit">Войти</button>
     `;
     block.append(loginBlock);
 
