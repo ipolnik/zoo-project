@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "sequelize db:migrate && node src/app.js",
     "dev": "nodemon src/app.js --ignore sessions --ext js,jsx",
     "test": "echo \"Error: no test specified\" && exit 1",
     "initdb": "npx sequelize db:create\nnpx sequelize-cli db:migrate:undo:all\nnpx sequelize-cli db:migrate\nnpx sequelize-cli db:seed:all\n"
