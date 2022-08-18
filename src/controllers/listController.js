@@ -56,6 +56,7 @@ const postAddAnimal = async (req, res) => {
     res.redirect('/list');
   } catch (error) {
     console.log('Запись данных не подключена', error);
+    res.redirect('/list');
   }
 };
 
