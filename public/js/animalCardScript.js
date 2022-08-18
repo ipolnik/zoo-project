@@ -46,7 +46,7 @@ if (removeButton) {
       });
       const responseJson = await response.json();
       if (responseJson) {
-        window.location = '/animalcard/1';
+        window.location = '/list';
       }
     } catch (error) {
       console.log('Error ==========================> ', error);
