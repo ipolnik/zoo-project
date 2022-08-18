@@ -19,7 +19,7 @@ module.exports = function Layout({ children, admin }) {
       </head>
       <body>
         <header>
-          <nav className="navbar navbar-expand-lg bg-light" id="navv">
+          <nav className="navbar navbar-expand-lg bg-orange" id="navv">
             <img className="logo" src="img/logo.png" width="10%" />
             <div className="container-fluid">
               <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
