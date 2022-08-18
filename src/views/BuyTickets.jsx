@@ -70,12 +70,16 @@ function Tariffs({ prices }) {
       <th scope="row">Итого</th>
       <td></td>
       <td></td>
-      <td>К оплате 1000 руб. <button type="button" className="btn btn-success" >Купить</button></td>
+      <td>К оплате 1000 руб. </td>
     </tr>
     </tbody>
 </table>
 </div>
-   
+<div className="emailinput">
+    <b>Введите ваш Email билеты придут к вам на почту: </b>
+<input className="email" type="text" placeholder="Введите ваш email" />
+<button type="button" className="btn btn-success" >Купить</button>
+</div>
     <script src="/js/tariffsClient.js"></script>
     </Layout>
   );

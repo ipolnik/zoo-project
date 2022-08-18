@@ -69,3 +69,13 @@ td {
 .quantity_item{
     width: 25px;
 }
+
+.email{
+    width: 200px;
+}
+
+.emailinput{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+} 
