@@ -3,7 +3,11 @@ const addAnimal = document.querySelector('.addAnimal');
 const card = document.querySelector('.card-deck');
 
 card.addEventListener('click', (e) => {
-  window.location.assign(`/animalcard/${e.target.id}`);
+  if (e.target.tagName === 'BUTTON') {
+    return
+  } else {
+    window.location.assign(`/animalcard/${e.target.id}`);
+  }
 });
 
 adminSet.addEventListener('click', async (e) => {
