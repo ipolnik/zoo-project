@@ -36,10 +36,11 @@ class AnimalCardController {
       const admin = req.session?.admin;
       // const newUser = 'Admin';
       if (admin) {
+        await Picture.destroy({ where: { animal_id: req.params.id } });
         await Animal.destroy({ where: { id: req.params.id } });
         res.json({ isDeleteSuccessful: true });
       } else {
-        res.redirect('/animalcard/1');
+        res.redirect('/list');
       }
     } catch (error) {
       res.send(error);
