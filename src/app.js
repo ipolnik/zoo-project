@@ -14,6 +14,7 @@ const app = express();
 dbConnectionCheck();
 
 // тут импорты всех роутов, если нужно
+const AnimalCardRouter = require('./routes/animalCardRouter');
 // const indexRoutes = require('./routes/indexRoutes');
 // const loginRoutes = require('./routes/loginRoutes');
 // const regRoutes = require('./routes/regRoutes');
@@ -39,6 +40,7 @@ const sessionConfig = {
 app.use(session(sessionConfig));
 
 // ссылки на роуты
+app.use('/animalcard', AnimalCardRouter);
 // app.use('/', indexRoutes);
 // app.use('/login', loginRoutes);
 // app.use('/register', regRoutes);
