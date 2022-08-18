@@ -4,6 +4,7 @@ const Layout = require('./Layout');
 function Form(props) {
   return (
     <Layout>
+      <link rel="stylesheet" href="/styles/edouard.css" />
       <div className="row">
         <h3 className="addAnimal">Добавление нового постояльца</h3>
         <div className="row-form">
