@@ -18,13 +18,13 @@ class AnimalCardController {
 
   async getCard(req, res) {
     try {
-      const newUser = req.session?.admin;
+      const admin = req.session?.admin;
       // const newUser = 'Admin';
       const animal = await Animal.findOne({ include: { model: Picture }, where: { id: req.params.id } });
       const pictures = animal.Pictures;
       const firstPic = pictures.shift();
       renderTemplate(AnimalCard, {
-        animal, pictures, firstPic, newUser,
+        animal, pictures, firstPic, admin,
       }, res);
     } catch (error) {
       res.send(`Error =========================> ${error.message}`);
@@ -33,9 +33,9 @@ class AnimalCardController {
 
   async deleteCard(req, res) {
     try {
-      const newUser = req.session?.admin;
+      const admin = req.session?.admin;
       // const newUser = 'Admin';
-      if (newUser) {
+      if (admin) {
         await Animal.destroy({ where: { id: req.params.id } });
         res.json({ isDeleteSuccessful: true });
       } else {
@@ -48,12 +48,12 @@ class AnimalCardController {
 
   async getUpdateCard(req, res) {
     try {
-      const newUser = req.session?.admin;
+      const admin = req.session?.admin;
       // const newUser = 'Admin';
       const animal = await Animal.findOne({ include: { model: Picture }, where: { id: req.params.id } });
       const pictures = animal.Pictures;
       renderTemplate(EditAnimalCard, {
-        animal, pictures, newUser,
+        animal, pictures, admin,
       }, res);
     } catch (error) {
       res.send(`Error =========================> ${error.message}`);
@@ -63,7 +63,7 @@ class AnimalCardController {
   async updateCard(req, res) {
     try {
       const { name, breed, description } = req.body;
-      const newUser = req.session?.admin;
+      const admin = req.session?.admin;
       // const newUser = 'Admin';
       // const animal = await Animal.findOne({ include: { model: Picture }, where: { id: req.params.id } });
       await Animal.update({
@@ -79,9 +79,9 @@ class AnimalCardController {
 
   async deletePic(req, res) {
     try {
-      const newUser = req.session?.admin;
+      const admin = req.session?.admin;
       // const newUser = 'Admin';
-      if (newUser) {
+      if (admin) {
         await Picture.destroy({ where: { id: req.params.id } });
         res.json({ isDeleteSuccessful: true });
       } else {

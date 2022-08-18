@@ -2,18 +2,17 @@ const React = require('react');
 const Layout = require('./Layout');
 
 module.exports = function AnimalCard({
-  animal, pictures, firstPic, newUser,
+  animal, pictures, firstPic, admin,
 }) {
   return (
-    <Layout admin={newUser}>
+    <Layout admin={admin}>
       <link rel="stylesheet" href="/styles/animalCard.css" />
-      <script defer src="/js/animalCardScript.js"></script>
       <div className="delete-confirm-background">
         <div className="delete-confirm alert alert-secondary">
           <p className="delete-confirm-text">Are you sure you want to delete this?</p>
           <div className="buttons-delete-confirm">
-            <button type="button" class="btn btn-success">NO</button>
-            <button type="button" class="btn btn-danger" data-animal_id={animal.id}>YES</button>
+            <button type="button" className="btn btn-success">NO</button>
+            <button type="button" className="btn btn-danger" data-animal_id={animal.id}>YES</button>
           </div>
         </div>
       </div>
@@ -63,13 +62,14 @@ module.exports = function AnimalCard({
             </small>
           </p>
         </div>
-        {newUser ? (
+        {admin ? (
           <div className="btn-group animal-cards-buttons">
             <a href={`/animalcard/${animal.id}/edit`} className="btn btn-warning edit-btn">edit</a>
             <button type="button" className="btn btn-danger del-btn">delete</button>
           </div>
         ) : ('')}
       </div>
+      <script defer src="/js/animalCardScript.js" />
     </Layout>
   );
 };

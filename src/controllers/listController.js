@@ -7,14 +7,14 @@ const Form = require('../views/Form');
 
 const renderList = async (req, res) => {
   try {
-    const newUser = req.session?.admin;
+    const admin = req.session?.admin;
     const animals = await Animal.findAll({
       order: [['id', 'DESC']],
       include: {
         model: Picture,
       },
     });
-    renderTemplate(List, { animals, newUser }, res);
+    renderTemplate(List, { animals, admin }, res);
   } catch (error) {
     console.log(error.message);
   }
