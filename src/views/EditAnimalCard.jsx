@@ -2,10 +2,10 @@ const React = require('react');
 const Layout = require('./Layout');
 
 module.exports = function EditAnimalCard({
-  animal, pictures, newUser,
+  animal, pictures, admin,
 }) {
   return (
-    <Layout>
+    <Layout admin={admin}>
       <link rel="stylesheet" href="/styles/animalCardEdit.css" />
       <script defer src="/js/editAnimalCardScript.js" />
       <div className="delete-confirm-background">

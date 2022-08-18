@@ -55,11 +55,7 @@
     justify-content: space-around;
 }
 
-h3{
-    font-family: cursive;
-}
-
-h4, th, td{
+th, td{
     font-family: cursive;
     font-size: 20px;
 }

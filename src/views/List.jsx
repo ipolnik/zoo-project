@@ -2,11 +2,11 @@ const React = require('react');
 const Layout = require('./Layout');
 // const findId = require('../controllers/listController');
 
-function List({ animals, newUser }) {
+function List({ animals, admin }) {
   return (
-    <Layout>
+    <Layout admin={admin}>
       <script defer src="js/listeFront.js" />
-      {newUser ? (
+      {admin ? (
         <>
           <div className="addAnimal">
             <button type="button" className="btn-add-animal" id="addAnimal">Добавить собакена</button>

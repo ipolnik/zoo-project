@@ -5,6 +5,7 @@ const deleteButton = document.querySelectorAll('.deletebutton');
 
 const menu2 = document.getElementById('menu-2');
 const menu1 = document.getElementById('menu-1');
+
 if (menu2) {
   const children = menu2.querySelectorAll('.nav-link');
   const { firstChild } = menu2;

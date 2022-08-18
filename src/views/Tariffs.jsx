@@ -2,7 +2,6 @@ const React = require('react');
 const Layout = require('./Layout');
 
 function Tariffs({ prices, admin }) {
-
   return (
     <Layout admin={admin}>
    <link rel="stylesheet" href="/styles/style.css" />

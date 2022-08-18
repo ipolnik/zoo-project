@@ -32,7 +32,6 @@ module.exports = function Layout({ children, admin }) {
                     <a className="nav-link active" aria-current="page" href="/">Главная страница</a>
                     <a className="nav-link" href="/list">Животные</a>
                     <a className="nav-link" href="/tariffs">Тарифы</a>
-                    <a className="nav-link" href="/location">Как нас найти?</a>
                     <a className="nav-link" href="/logout" id="logout_id">Выйти</a>
                   </div>
                 </div>
@@ -42,7 +41,6 @@ module.exports = function Layout({ children, admin }) {
                     <a className="nav-link active" aria-current="page" href="/">Главная страница</a>
                     <a className="nav-link" href="/list">Животные</a>
                     <a className="nav-link" href="/prices">Тарифы</a>
-                    <a className="nav-link" href="/location">Как нас найти?</a>
                     <a className="nav-link" href="/login" id="login_id">Вход</a>
                   </div>
                 </div>

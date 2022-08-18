@@ -2,6 +2,7 @@ const block = document.getElementById('blockContainer');
 const links = document.getElementById('navbarNavAltMarkup');
 const navbar = document.getElementById('navbarNavAltMarkup');
 const menu2 = document.getElementById('menu-2');
+const menu1 = document.getElementById('menu-1');
 
 const img = document.querySelector('.img-container');
 
@@ -9,6 +10,7 @@ const error = document.createElement('div');
 error.classList.add('error');
 
 const loginBlock = document.createElement('div');
+
 links?.addEventListener('click', (e) => {
   e.preventDefault();
   if (e.target.tagName === 'A' && e.target.innerHTML === 'Вход') {
@@ -80,31 +82,28 @@ links?.addEventListener('click', (e) => {
     });
   }
   if (e.target.tagName === 'A' && e.target.innerHTML === 'Главная страница') {
-    // * меняем аттрибут active у кнопки входа
-    const { lastElementChild } = menu2;
-    const { firstChild } = menu2;
-    lastElementChild.className = 'nav-link';
-    firstChild.className = 'nav-link active';
-    img.style.margin = '0 0 0 0';
-
-    if (loginBlock) {
-      block.removeChild(loginBlock);
-      if (error) {
-        block.removeChild(error);
-      }
+    if (menu2) {
+      window.location.assign('/');
+    }
+    if (menu1) {
+      window.location.assign('/');
     }
   }
   if (e.target.tagName === 'A' && e.target.innerHTML === 'Животные') {
-    window.location.assign('/list');
+    if (menu2) {
+      window.location.assign('/list');
+    }
+    if (menu1) {
+      window.location.assign('/list');
+    }
   }
   if (e.target.tagName === 'A' && e.target.innerHTML === 'Тарифы') {
-    const children = menu2.querySelectorAll('.nav-link');
-    console.log(children);
-    children[2].className = 'nav-link active';
-    window.location.assign('/tariffs');
-  }
-  if (e.target.tagName === 'A' && e.target.innerHTML === 'Как нас найти?') {
-    window.location.assign('/location');
+    if (menu2) {
+      window.location.assign('/tariffs');
+    }
+    if (menu1) {
+      window.location.assign('/tariffs');
+    }
   }
   if (e.target.tagName === 'A' && e.target.innerHTML === 'Выйти') {
     window.location.assign('/logout');

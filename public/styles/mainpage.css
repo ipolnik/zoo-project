@@ -154,3 +154,7 @@ body{
   color: rgb(0, 0, 0);
   text-align: center;
 }
+
+.map {
+  margin: 0 0 40px 0;
+}
