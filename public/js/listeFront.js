@@ -1,5 +1,14 @@
 const adminSet = document.querySelector('.admin');
 const addAnimal = document.querySelector('.addAnimal');
+const card = document.querySelector('.card-deck');
+
+card.addEventListener('click', (e) => {
+  if (e.target.tagName === 'BUTTON') {
+    return
+  } else if (e.target.tagName !== 'DIV') {
+    window.location.assign(`/animalcard/${e.target.id}`);
+  }
+});
 
 const menu2 = document.getElementById('menu-2');
 const menu1 = document.getElementById('menu-1');
@@ -37,7 +46,7 @@ adminSet?.addEventListener('click', async (e) => {
   } else if (e.target.tagName === 'BUTTON' && e.target.className === 'btn btn-success') {
     const idAnimal = e.target.id;
 
-    window.location.assign(`/animalcard/${idAnimal}`);
+    window.location.assign(`/animalcard/${idAnimal}/edit`);
   }
 });
 addAnimal?.addEventListener('click', (e) => {
