@@ -21,8 +21,10 @@ function List({ animals, admin }) {
                   <h3 className="card-title" id={animal.id}>{animal.breed}</h3>
                   <p className="card-text" id={animal.id}>{animal.description}</p>
                 </div>
-                <button type="button" name="edit" className="btn btn-success" id={animal.id}>Edit</button>
-                <button type="button" name="edit" className="btn btn-danger" id={animal.id}>Delete</button>
+                <div className="button-container">
+                  <button type="button" name="edit" className="btn btn-success" id={animal.id}>Edit</button>
+                  <button type="button" name="edit" className="btn btn-danger" id={animal.id}>Delete</button>
+                </div>
               </div>
             ))}
           </div>
