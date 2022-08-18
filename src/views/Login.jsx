@@ -14,7 +14,7 @@ function Login({ admin }) {
           <input name="password" type="password" className="form-control" id="exampleInputPassword1" />
         </div>
         <button type="submit" className="btn btn-primary" id="submit">Войти</button>
-        {   <div><a href="/signup">Нет аккаунта? Зарегистрируйся!</a></div> }
+        {/* {   <div><a href="/signup">Нет аккаунта? Зарегистрируйся!</a></div> } */}
       </form>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossOrigin="anonymous" />
       <script defer src="/js/mainpage.js" />

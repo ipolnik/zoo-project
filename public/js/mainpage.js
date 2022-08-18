@@ -29,7 +29,6 @@ links?.addEventListener('click', (e) => {
           <input name="password" type="password" className="form-control" placeholder="Password" id="exampleInputPassword1" />
         </div>
         <button type="submit" className="btn btn-primary" id="submit">Войти</button>
-        <div><a href="/signup">Нет аккаунта? Зарегистрируйся!</a></div>
     `;
     block.append(loginBlock);
 
