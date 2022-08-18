@@ -18,7 +18,9 @@ adminSet.addEventListener('click', async (e) => {
       adminSet.removeChild(e.target.parentNode);
     }
   } else if (e.target.tagName === 'BUTTON' && e.target.className === 'btn btn-success') {
-    window.location.assign('/animal');
+    const idAnimal = e.target.id;
+
+    window.location.assign(`/animalcard/${idAnimal}`);
   }
 });
 addAnimal.addEventListener('click', (e) => {

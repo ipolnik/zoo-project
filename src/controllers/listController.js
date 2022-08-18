@@ -14,7 +14,6 @@ const renderList = async (req, res) => {
         model: Picture,
       },
     });
-    console.log(animals[0].Pictures);
     renderTemplate(List, { animals, newUser }, res);
   } catch (error) {
     console.log(error.message);
@@ -26,7 +25,6 @@ const deleteAnimal = async (req, res) => {
   try {
     await Picture.destroy({ where: { animal_id: id } });
     await Animal.destroy({ where: { id } });
-
     res.json({ delete: 'ok' });
   } catch (error) {
     res.json({
@@ -42,12 +40,9 @@ const addAnimal = async (req, res) => {
 
 const postAddAnimal = async (req, res) => {
   const { name, breed, description } = req.body;
-  console.log(req.files);
-  console.log(name, breed, description);
   const files = [...req.files];
   const result = files.map((el) => el = el.path);
   const final = result.map((el) => el.slice(6));
-  console.log(final);
   try {
     const newAnimal = await Animal.create({ name, breed, description });
     // const newPictures = await Picture.create({ animal_id: newAnimal.id, picture_link: });
@@ -58,7 +53,6 @@ const postAddAnimal = async (req, res) => {
     } else {
       const newPicture = await Picture.create({ animal_id: newAnimal.id, picture_link: final });
     }
-    console.log(newAnimal);
     res.redirect('/list');
   } catch (error) {
     console.log('Запись данных не подключена', error);
@@ -68,12 +62,3 @@ const postAddAnimal = async (req, res) => {
 module.exports = {
   renderList, deleteAnimal, addAnimal, postAddAnimal,
 };
-
-// async function add() {
-//   const addlinc = await Picture.create({
-//     animal_id: '2', picture_link: '/img/penguin-42936_640.png', createdAt: new Date(), updateAt: new Date(),
-//   });
-//   console.log(addlinc);
-// }
-
-// add();
