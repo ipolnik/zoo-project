@@ -2,16 +2,19 @@ html,
 body {
   height: 100%;
 }
+
 #wrap {
   min-height: 100%;
   display: flex;
   flex-direction: column;
 }
+
 main {
   padding-bottom: 100px;
   flex: 1 1 auto;
   /*Высота футера*/
 }
+
 footer {
   margin-top: -100px;
   /*Минус Высота футера*/
@@ -20,11 +23,11 @@ footer {
 }
 
 .nav-link {
-  color: rgb(94,57,41);
+  color: rgb(94, 57, 41);
 }
 
-.nav-link:hover{
-  color: rgb(94,57,41);
+.nav-link:hover {
+  color: rgb(94, 57, 41);
 }
 
 .navbar {
@@ -38,10 +41,11 @@ footer {
 }
 
 .navbar-brand {
-  color: rgb(94,57,41);
+  color: rgb(94, 57, 41);
 }
+
 .navbar-brand:hover {
-  color: rgb(94,57,41);
+  color: rgb(94, 57, 41);
 }
 
 #blockContainer {
@@ -57,42 +61,44 @@ footer {
   color: rgba(69, 64, 64, 0.6);
 }
 
-.img-container{
+.img-container {
   display: flex;
   justify-content: space-around;
-  
+
 }
 
-.loginBlock{
+.loginBlock {
   width: 30%;
   border-radius: 15px;
-  background-color:  rgb(233, 195, 126);
-	overflow: hidden;
-	margin-top: 50px;
-	opacity: 1;
-	visibility: visible;
-	-webkit-transition: all .3s ease;
+  background-color: rgb(233, 195, 126);
+  overflow: hidden;
+  margin-top: 50px;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: all .3s ease;
   -webkit-box-shadow: 0px -3px 28px 23px rgba(34, 60, 80, 0.2);
   -moz-box-shadow: 0px -3px 28px 23px rgba(34, 60, 80, 0.2);
   box-shadow: 0px -3px 28px 23px rgba(34, 60, 80, 0.2);
 }
-#submit{
+
+#submit {
   background-color: rgb(233, 205, 153);
-	color: rgba(69, 64, 64, 0.4);
-	border:0;
-	border-radius: 15px;
-	display: block;
-	margin: 15px auto; 
-	padding: 15px 45px;
-	width: 60%;
-	font-size: 16px;
-	font-weight: bold;
-	cursor: pointer;
-	opacity: 1;
-	visibility: visible;
-	-webkit-transition: all .3s ease;
-      
+  color: rgba(69, 64, 64, 0.4);
+  border: 0;
+  border-radius: 15px;
+  display: block;
+  margin: 15px auto;
+  padding: 15px 45px;
+  width: 60%;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: all .3s ease;
+
 }
+
 #submit:hover {
   transition: all .3s ease;
   background-color: rgb(233, 205, 153);
@@ -101,16 +107,16 @@ footer {
 #exampleInputLogin1 {
   color: rgb(69, 64, 64);
   border-radius: 8px;
-  background-color: rgb(233, 205, 153);  
+  background-color: rgb(233, 205, 153);
   outline: none;
   border: 0;
-	outline: none;
-	box-shadow: none;
-	display: block;
-	height: 30px;
-	line-height: 30px;
-	padding: 8px 15px;
-	width: 100%;
+  outline: none;
+  box-shadow: none;
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  padding: 8px 15px;
+  width: 100%;
 }
 
 #exampleInputPassword1 {
@@ -118,15 +124,15 @@ footer {
   border-radius: 8px;
   background-color: rgb(233, 205, 153);
   outline: none;
-  border-style:none;
-	display: block;
-	height: 30px;
-	line-height: 30px;
-	padding: 8px 15px;
-	width: 100%;
+  border-style: none;
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  padding: 8px 15px;
+  width: 100%;
 }
 
-#log{
+#log {
   padding: 20px 0 0 0;
   display: block;
   align-items: center;
@@ -141,23 +147,23 @@ footer {
   margin: 40px 0 40px 0;
 }
 
-body{
+body {
   background-color: rgba(238, 228, 211, 0.2);
 }
 
 .mainpage-title {
-  color:rgb(94,57,41);
+  color: rgb(94, 57, 41);
   display: flex;
   justify-content: center;
   margin: 0 0 25px 0;
 }
 
-.map{
+.map {
   display: flex;
   justify-content: space-around;
 }
 
-.carousel-inner{
+.carousel-inner {
   max-width: 1200px;
   max-height: 650px;
 }
@@ -177,4 +183,3 @@ body{
 .map {
   margin: 0 0 40px 0;
 }
-
