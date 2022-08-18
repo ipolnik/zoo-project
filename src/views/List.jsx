@@ -5,6 +5,7 @@ const Layout = require('./Layout');
 function List({ animals, admin }) {
   return (
     <Layout admin={admin}>
+      <link rel="stylesheet" href="/styles/edouard.css" />
       <script defer src="js/listeFront.js" />
       {admin ? (
         <>

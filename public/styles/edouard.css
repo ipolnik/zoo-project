@@ -4,10 +4,12 @@ body {
 }
 #wrap {
   min-height: 100%;
-  border: 1px solid #000;
+  display: flex;
+  flex-direction: column;
 }
 main {
   padding-bottom: 100px;
+  flex: 1 1 auto;
   /*Высота футера*/
 }
 footer {
@@ -16,6 +18,7 @@ footer {
   height: 100px;
   /*Высота футера*/
 }
+
 /**************************************************CARD**********************************************/
 .card-deck{
   display: flex;
@@ -121,6 +124,3 @@ footer {
   margin: 10px 0;
 }
 
-.header{
-
-}
