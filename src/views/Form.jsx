@@ -5,6 +5,7 @@ function Form({admin}) {
   return (
     <Layout admin={admin}>
       <link rel="stylesheet" href="/styles/edouard.css" />
+      <script defer src="js/formScript.js" />
       <div className="row">
         <h3 className="addAnimal">Добавление нового постояльца</h3>
         <div className="row-form">
