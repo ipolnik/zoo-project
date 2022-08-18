@@ -1,3 +1,21 @@
+html,
+body {
+  height: 100%;
+}
+#wrap {
+  min-height: 100%;
+  border: 1px solid #000;
+}
+main {
+  padding-bottom: 100px;
+  /*Высота футера*/
+}
+footer {
+  margin-top: -100px;
+  /*Минус Высота футера*/
+  height: 100px;
+  /*Высота футера*/
+}
 /**************************************************CARD**********************************************/
 .card-deck{
   display: flex;
@@ -101,5 +119,8 @@
   border-radius: 15%;
   color: rgb(94, 95, 95);
   margin: 10px 0;
-  
+}
+
+.header{
+
 }
