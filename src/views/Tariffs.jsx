@@ -27,9 +27,9 @@ function Tariffs({ prices, admin }) {
   <tbody>
     <tr class="table-success" key={el.id}>
       <th scope="row">{el.price_name}</th>
-      <td>{el.option1} .руб</td>
-      <td>{el.option2} .руб</td>
-      <td>{el.option3} .руб</td>
+      <td>{el.option1} руб.</td>
+      <td>{el.option2} руб.</td>
+      <td>{el.option3} руб.</td>
     </tr>
     </tbody>)}
 </table>
@@ -112,9 +112,9 @@ function Tariffs({ prices, admin }) {
   <tbody>
     <tr class="table-success" key={el.id}>
       <th scope="row">{el.price_name}</th>
-      <td>{el.option1} .руб</td>
-      <td>{el.option2} .руб</td>
-      <td>{el.option3} .руб</td>
+      <td>{el.option1} руб.</td>
+      <td>{el.option2} руб.</td>
+      <td>{el.option3} руб.</td>
     </tr>
     </tbody>)}
 </table>
