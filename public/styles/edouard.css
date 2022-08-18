@@ -1,0 +1,105 @@
+/**************************************************CARD**********************************************/
+.card-deck{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  min-width: 30%;
+  min-height: 30%;
+  max-width: 200px;
+  transition: 1s;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.card:hover{
+  transform: scale(1.1);
+}
+.img-div {
+  max-height: 300px;
+  text-align: -webkit-center;
+  max-width: 250px;
+  justify-content: center;
+  align-self: center;
+  text-align: center;
+
+}
+.card img {
+  width:100%;
+  height:100%;
+}
+
+.card-img-top{
+  width: 100%;
+}
+
+.card {
+  margin-top: 100px;
+}
+.row {
+  display: flex;
+  justify-content: center;
+
+}
+.row-form{
+  max-width: 30%;
+}
+.input-form{
+  width: 100%;
+  position: relative;
+  margin: 15px 0;
+
+}
+#input__file {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+}
+.form-control{
+  border: none;
+}
+
+.form-add-animals input {
+  margin: 10px;
+  border: none;
+}
+
+.custom-file-input{
+  color: aqua;
+}
+
+.addAnimal{
+  text-align: center;
+  margin: 0 0 20px 0;
+}
+.input__file-icon{
+  margin: 0 0 0 5px;
+  min-height: 45px;
+  min-width: 45px;
+}
+
+.btn-animals{
+  border: none;
+  background-color: rgba(255,218,170,255);
+  border-radius: 15%;
+  color: rgb(94, 95, 95);
+  margin: 10px 0;
+}
+
+#addAnimal{
+  text-transform: uppercase;
+  font-size: 18px;
+  border: none;
+  background-color: rgba(255,218,170,255);
+  border-radius: 15%;
+  color: rgb(94, 95, 95);
+  margin: 10px 0;
+  
+}
