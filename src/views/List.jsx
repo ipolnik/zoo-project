@@ -17,7 +17,7 @@ function List({ animals, admin }) {
               <div className="card animate__animated animate__pulse" id={animal.id}>
 
                 <div className="img-div">
-                  <img className="card-img-top" src={animal.Pictures[0]?.picture_link} alt="Card cap" id={animal.id} />
+                  {animal.Pictures.length > 0 ? (<img className="card-img-top" src={animal.Pictures[0]?.picture_link} alt="Card cap" id={animal.id} />) : ('')}
                 </div>
 
                 <div className="card-body" id={animal.id}>

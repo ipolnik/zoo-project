@@ -7,10 +7,12 @@ const { Animal, Picture } = require('../../db/models');
 class AnimalCardController {
   async addPic(req, res) {
     const { id } = req.params;
-    const fileName = req.file.filename;
+    const fileName = req.file?.filename;
     try {
-      const newPic = await Picture.create({ animal_id: id, picture_link: `/img/${fileName}` });
-      res.json({ status: 'created', id: newPic.id, link: newPic.picture_link });
+      if (fileName) {
+        const newPic = await Picture.create({ animal_id: id, picture_link: `/img/${fileName}` });
+        res.json({ status: 'created', id: newPic.id, link: newPic.picture_link });
+      }
     } catch (error) {
       res.send(`Error =========================> ${error.message}`);
     }

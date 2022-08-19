@@ -124,3 +124,11 @@
 button {
   min-width: 100px;
 }
+
+@media (max-width: 800px) {
+  .button-container {
+    flex-direction: column;
+  }
+
+  button
+}
