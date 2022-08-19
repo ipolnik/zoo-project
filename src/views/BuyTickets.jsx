@@ -21,48 +21,49 @@ function Tariffs({ prices }) {
       <th scope="col">Колличество</th>
     </tr>
   </thead >
-
+  {prices?.map((el) => (
+            
   <tbody>
-    <tr class="table-success" >
-      <th scope="row">Праздничный</th>
+    <tr class="table-success" key={el.id}>
+      <th scope="row">{el.price_name}</th>
       <td>Взрослый</td>
-      <td>20</td>
+      <td><span class="price_item1"> {el.option1}</span> руб.</td>
       <td><div id="quantity">
-        <button class="plus-btn" type="button" name="button">
-                    <img src="/img/plus.svg" />
+        <button class="minus-btn" type="button" name="button" data-age="adult">
+                    -
         </button>
-        <input type="text" name="ticket[1626]" value="0" class="quantity_item" readonly="readonly"></input>
-        <button class="minus-btn" type="button" name="button">
-                    <img src="/img/minus.svg" />
+        <input type="text" name="ticket1" value="0" class="quantity_item_adult" readonly="readonly"></input>
+        <button class="plus-btn" type="button" name="button" data-age="adult">
+                    +
         </button>
             </div>
         </td>
     </tr>
     <tr class="table-success" >
-      <th scope="row">Праздничный</th>
+      <th scope="row">{el.price_name}</th>
       <td>Детский</td>
-      <td>20</td>
+      <td><span class="price_item2">{el.option2}</span> руб.</td>
       <td><div id="quantity">
-        <button class="plus-btn" type="button" name="button">
-                    <img src="/img/plus.svg" />
+        <button class="minus-btn" type="button" name="button" data-age="kids">
+                    -
         </button>
-        <input type="text" name="ticket[1626]" value="0" class="quantity_item" readonly="readonly"></input>
-        <button class="minus-btn" type="button" name="button">
-                    <img src="/img/minus.svg" />
+        <input type="text" name="ticket2" value="0" class="quantity_item_kid" readonly="readonly"></input>
+        <button class="plus-btn" type="button" name="button" data-age="kid">
+                    +
         </button>
             </div></td>
     </tr>
     <tr class="table-success" >
-      <th scope="row">Праздничный</th>
+      <th scope="row">{el.price_name}</th>
       <td>Пенсионный</td>
-      <td>20</td>
+      <td><span class="price_item3"> {el.option3}</span> руб.</td>
       <td><div id="quantity">
-        <button class="plus-btn" type="button" name="button">
-                    <img src="/img/plus.svg" />
+        <button class="minus-btn" type="button" name="button" data-age="elder">
+                    -
         </button>
-        <input type="text" name="ticket[1626]" value="0" class="quantity_item" readonly="readonly"></input>
-        <button class="minus-btn" type="button" name="button">
-                    <img src="/img/minus.svg" />
+        <input type="text" name="ticket3" value="0" class="quantity_item_elder" readonly="readonly"></input>
+        <button class="plus-btn" type="button" name="button" data-age="elder">
+                   +
         </button>
             </div></td>
     </tr>
@@ -70,15 +71,16 @@ function Tariffs({ prices }) {
       <th scope="row">Итого</th>
       <td></td>
       <td></td>
-      <td>К оплате 1000 руб. </td>
+      <td><b>К оплате:</b> <span id="total_sum">0</span> руб.</td>
     </tr>
     </tbody>
+))}
 </table>
 </div>
 <div className="emailinput">
     <b>Введите ваш Email билеты придут к вам на почту: </b>
-<input className="email" type="text" placeholder="Введите ваш email" />
-<button type="button" className="btn btn-success" >Купить</button>
+<input className="email" type="Email" placeholder="Введите ваш email" />
+<button type="button" className="btn btn-success" id="buybutton">Купить</button>
 </div>
     <script src="/js/tariffsClient.js"></script>
     </Layout>

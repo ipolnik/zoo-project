@@ -4,7 +4,6 @@ const card = document.querySelector('.card-deck');
 
 card.addEventListener('click', (e) => {
   if (e.target.tagName === 'BUTTON') {
-    return
   } else if (e.target.tagName !== 'DIV') {
     window.location.assign(`/animalcard/${e.target.id}`);
   }
@@ -19,7 +18,7 @@ if (menu2) {
   firstChild.className = 'nav-link';
   children[1].className = 'nav-link active';
   const { lastElementChild } = menu2;
-  menu2.removeChild(lastElementChild);
+  // menu2.removeChild(lastElementChild);
 }
 if (menu1) {
   const children = menu1.querySelectorAll('.nav-link');
