@@ -24,6 +24,7 @@ footer {
 
 .nav-link {
   color: rgb(94, 57, 41);
+
 }
 
 .nav-link:hover {
@@ -35,7 +36,9 @@ footer {
 }
 
 .navbar-nav .nav-link.active {
-  font-size: 21px;
+  /* font-size: 21px; */
+  text-transform: uppercase;
+  text-decoration:underline;
   color: rgb(51, 31, 22);
   /* color:rgb(233, 195, 126); */
 }
@@ -54,7 +57,14 @@ footer {
   flex-direction: column;
   justify-content: space-between;
 }
+.login-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 
+  margin-top: 10%;
+}
 .error {
   font-style: italic;
   margin: 15px 0 0 0;
@@ -142,6 +152,26 @@ footer {
 }
 
 
+#login_id{
+margin: 0 50px 0 0;
+position: absolute;
+right: 0;
+}
+@media(max-width:991px){
+  #login_id{
+    position: relative;
+  }
+}
+#logout_id{
+  margin: 0 50px 0 0;
+  position: absolute;
+  right: 0;
+}
+@media(max-width:991px){
+  #logout_id{
+    position: relative;
+  }
+}
 .space {
   height: 60px;
 }
