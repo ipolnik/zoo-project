@@ -15,7 +15,9 @@ function List({ animals, admin }) {
           <div className="card-deck admin">
             {animals.map((animal) => (
               <div className="card animate__animated animate__pulse" id={animal.id}>
-                <img className="card-img-top" src={animal.Pictures[0]?.picture_link} alt="Card cap" id={animal.id} />
+                <div className="img-div">
+                  <img className="card-img-top" src={animal.Pictures[0]?.picture_link} alt="Card cap" id={animal.id} />
+                </div>
                 <div className="card-body" id={animal.id}>
                   <h5 className="card-title" id={animal.id}>{animal.name}</h5>
                   <h3 className="card-title" id={animal.id}>{animal.breed}</h3>
@@ -31,10 +33,12 @@ function List({ animals, admin }) {
         <div className="card-deck">
           {animals.map((animal) => (
             <div className="card animate__animated animate__pulse">
-              <img className="card-img-top" src={animal.Pictures[0]?.picture_link} alt="Card cap" id={animal.id} />
+              <div className="img-div">
+                <img className="card-img-top" src={animal.Pictures[0]?.picture_link} alt="Card cap" id={animal.id} />
+              </div>
               <h3 className="card-title" id={animal.id}>{animal.name}</h3>
-              <h5 className="card-title" id={animal.id}>{animal.breed}</h5>
-              <p className="card-text" id={animal.id}>{animal.breed}</p>
+              {/* <h5 className="card-title" id={animal.id}>{animal.breed}</h5> */}
+              {/* <p className="card-text" id={animal.id}>{animal.breed}</p> */}
             </div>
           ))}
         </div>
