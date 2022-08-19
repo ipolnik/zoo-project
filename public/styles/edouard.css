@@ -130,5 +130,12 @@ button {
     flex-direction: column;
   }
 
-  button
+  button {
+    margin-bottom: 5px;
+  }
+}
+
+.card-text-div {
+  overflow: auto;
+  max-height: 100px;
 }
