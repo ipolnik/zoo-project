@@ -21,13 +21,13 @@ function Tariffs({ prices }) {
       <th scope="col">Колличество</th>
     </tr>
   </thead >
-  {prices?.map((el) => (
+
             
   <tbody>
-    <tr class="table-success" key={el.id}>
-      <th scope="row">{el.price_name}</th>
+    <tr class="table-success" >
+      <th scope="row">{prices.price_name}</th>
       <td>Взрослый</td>
-      <td><span class="price_item1"> {el.option1}</span> руб.</td>
+      <td><span class="price_item1"> {prices.option1}</span> руб.</td>
       <td><div id="quantity">
         <button class="minus-btn" type="button" name="button" data-age="adult">
                     -
@@ -40,9 +40,9 @@ function Tariffs({ prices }) {
         </td>
     </tr>
     <tr class="table-success" >
-      <th scope="row">{el.price_name}</th>
+      <th scope="row">{prices.price_name}</th>
       <td>Детский</td>
-      <td><span class="price_item2">{el.option2}</span> руб.</td>
+      <td><span class="price_item2">{prices.option2}</span> руб.</td>
       <td><div id="quantity">
         <button class="minus-btn" type="button" name="button" data-age="kids">
                     -
@@ -54,9 +54,9 @@ function Tariffs({ prices }) {
             </div></td>
     </tr>
     <tr class="table-success" >
-      <th scope="row">{el.price_name}</th>
+      <th scope="row">{prices.price_name}</th>
       <td>Пенсионный</td>
-      <td><span class="price_item3"> {el.option3}</span> руб.</td>
+      <td><span class="price_item3"> {prices.option3}</span> руб.</td>
       <td><div id="quantity">
         <button class="minus-btn" type="button" name="button" data-age="elder">
                     -
@@ -74,14 +74,17 @@ function Tariffs({ prices }) {
       <td><b>К оплате:</b> <span id="total_sum">0</span> руб.</td>
     </tr>
     </tbody>
-))}
+    
+
 </table>
 </div>
 <div className="emailinput">
-    <b>Введите ваш Email билеты придут к вам на почту: </b>
-<input className="email" type="Email" placeholder="Введите ваш email" />
-<button type="button" className="btn btn-success" id="buybutton">Купить</button>
-</div>
+        <b>Введите ваш Email билеты придут к вам на почту: </b>
+        <form method="POST" className="mainForm">
+          <input className="email" type="text" placeholder="Введите ваш email" name="email" />
+          <button className="btn btn-success" id="buybutton" type="submit">Купить</button>
+        </form>
+      </div>
     <script src="/js/tariffsClient.js"></script>
     </Layout>
   );

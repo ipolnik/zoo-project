@@ -2,8 +2,6 @@ const tariffsFormAdd = document.querySelector('.formTarAdd');
 const mainDiv = document.querySelector('.mainDivTar');
 const tarForm = document.querySelector('.formTariffs');
 const deleteButton = document.querySelectorAll('.deletebutton');
-const plusBtn = document.querySelector('.plus-btn');
-const minusBtn = document.querySelector('.minus-btn');
 const totalSum = document.querySelector('#total_sum')
 const ticketCounterAdult = document.querySelector('.quantity_item_adult');
 const ticketCounterKids = document.querySelector('.quantity_item_kid');
@@ -129,17 +127,30 @@ let countElder = 0;
 let totalPrice = 0;
 const price1 = document.querySelector(".price_item1");
 
-tablePrice.addEventListener('click', (event) => {
+tablePrice.addEventListener('click', async(event) => {
+  console.log(event.target)
   if(event.target.className === "plus-btn" ) {
     console.log(event.target)
      counterPlus(event.target.dataset.age)
+     return
   }
   if(event.target.className === "minus-btn"){
   console.log(event.target.dataset.age)
   console.log(event.target)
     counterMinus(event.target.dataset.age)
+    return
   }
-});
+
+  if(event.target.tagName === 'BUTTON'){
+    const buyid = event.target.id;
+    console.log(buyid)
+
+        window.location.assign(`/tariffs/buy/${buyid}`)
+
+      }
+    } 
+);
+
 
 
 function counterPlus(type){
@@ -183,3 +194,22 @@ function counterMinus(type){
       console.log(countElder)
       }
 }
+
+const form = document.querySelector('.mainForm');
+form.addEventListener('submit', async (event) => {
+  event.preventDefault();
+  const email = event.target.email.value
+  const totalsum = document.querySelector("#total_sum").textContent;
+  const obj = { email, totalsum }
+  console.log('OBJ================================================>', obj)
+  const response = await fetch('/tariffs/buy', {
+    method: 'POST',
+    headers: {
+      'Content-type': 'application/json',
+    },
+    body: JSON.stringify(obj),
+  });
+  if(response.status === 200){
+    window.alert("Email отправлен!")
+  }
+});

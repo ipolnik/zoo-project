@@ -7,7 +7,7 @@ function Tariffs({ prices, admin }) {
    <link rel="stylesheet" href="/styles/style.css" />
         { admin ? (
           <>
-           <div id="tigerimg">
+           <div id="tigerimg" >
       <img src="/img/tiger.gif" alt="tiger" id="tiger"/>
     </div>
     <br />
@@ -26,16 +26,16 @@ function Tariffs({ prices, admin }) {
   </thead >
   {prices?.map((el) => 
   <tbody>
-    <tr class="table-success" key={el.id}>
+    <tr class="table-success" key={el.id} >
       <th scope="row">{el.price_name}</th>
       <td>{el.option1} руб.</td>
       <td>{el.option2} руб.</td>
       <td>{el.option3} руб.</td>
-      <td><a href="/tariffs/buy">Купить</a></td>
+      <td><button id={el.id} type="button" className="btn btn-success" >Купить</button></td>
     </tr>
     </tbody>)}
 </table>
-</div>
+</div >
       <br />
        <h4 className="card-title-tariffs">Добавить новый тариф</h4>
        <form className="formTarAdd" action = "/tariffs" method = "POST">
@@ -118,7 +118,7 @@ function Tariffs({ prices, admin }) {
       <td>{el.option1} руб.</td>
       <td>{el.option2} руб.</td>
       <td>{el.option3} руб.</td>
-      <td><a href="/tariffs/buy">Купить</a> </td>
+      <td><button id={el.id} type="button" className="btn btn-success" >Купить</button></td>
     </tr>
     </tbody>)}
 </table>
