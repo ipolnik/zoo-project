@@ -23,7 +23,9 @@ function List({ animals, admin }) {
                 <div className="card-body" id={animal.id}>
                   <h5 className="card-title" id={animal.id}>{animal.name}</h5>
                   <h3 className="card-title" id={animal.id}>{animal.breed}</h3>
-                  <p className="card-text" id={animal.id}>{animal.description}</p>
+                  <div className="card-text-div">
+                    <p className="card-text" id={animal.id}>{animal.description}</p>
+                  </div>
                 </div>
                 <div className="button-container">
                   <button type="button" name="edit" className="btn btn-success" id={animal.id}>Edit</button>
