@@ -21,48 +21,49 @@ function Tariffs({ prices }) {
       <th scope="col">Колличество</th>
     </tr>
   </thead >
-
+  {prices?.map((el) => (
+            
   <tbody>
-    <tr class="table-success" >
-      <th scope="row">Праздничный</th>
+    <tr class="table-success" key={el.id}>
+      <th scope="row">{el.price_name}</th>
       <td>Взрослый</td>
-      <td><span class="price_item1">300</span> руб.</td>
+      <td><span class="price_item1"> {el.option1}</span> руб.</td>
       <td><div id="quantity">
         <button class="minus-btn" type="button" name="button" data-age="adult">
-                    <img src="/img/minus.svg" />
+                    -
         </button>
         <input type="text" name="ticket1" value="0" class="quantity_item_adult" readonly="readonly"></input>
         <button class="plus-btn" type="button" name="button" data-age="adult">
-                    <img src="/img/plus.svg" />
+                    +
         </button>
             </div>
         </td>
     </tr>
     <tr class="table-success" >
-      <th scope="row">Праздничный</th>
+      <th scope="row">{el.price_name}</th>
       <td>Детский</td>
-      <td><span class="price_item2">200</span> руб.</td>
+      <td><span class="price_item2">{el.option2}</span> руб.</td>
       <td><div id="quantity">
         <button class="minus-btn" type="button" name="button" data-age="kids">
-                    <img src="/img/minus.svg" />
+                    -
         </button>
         <input type="text" name="ticket2" value="0" class="quantity_item_kid" readonly="readonly"></input>
         <button class="plus-btn" type="button" name="button" data-age="kid">
-                    <img src="/img/plus.svg" />
+                    +
         </button>
             </div></td>
     </tr>
     <tr class="table-success" >
-      <th scope="row">Праздничный</th>
+      <th scope="row">{el.price_name}</th>
       <td>Пенсионный</td>
-      <td><span class="price_item3">100</span> руб.</td>
+      <td><span class="price_item3"> {el.option3}</span> руб.</td>
       <td><div id="quantity">
         <button class="minus-btn" type="button" name="button" data-age="elder">
-                    <img src="/img/minus.svg" />
+                    -
         </button>
         <input type="text" name="ticket3" value="0" class="quantity_item_elder" readonly="readonly"></input>
         <button class="plus-btn" type="button" name="button" data-age="elder">
-                    <img src="/img/plus.svg" />
+                   +
         </button>
             </div></td>
     </tr>
@@ -73,6 +74,7 @@ function Tariffs({ prices }) {
       <td><b>К оплате:</b> <span id="total_sum">0</span> руб.</td>
     </tr>
     </tbody>
+))}
 </table>
 </div>
 <div className="emailinput">

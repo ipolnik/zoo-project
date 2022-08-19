@@ -127,25 +127,27 @@ let countAdult = 0;
 let countKids = 0;
 let countElder = 0;
 let totalPrice = 0;
-
+const price1 = document.querySelector(".price_item1");
 
 tablePrice.addEventListener('click', (event) => {
   if(event.target.className === "plus-btn" ) {
-    console.log(event.target.dataset.age)
+    console.log(event.target)
      counterPlus(event.target.dataset.age)
   }
   if(event.target.className === "minus-btn"){
   console.log(event.target.dataset.age)
-     counterMinus(event.target.dataset.age)
+  console.log(event.target)
+    counterMinus(event.target.dataset.age)
   }
 });
 
+
 function counterPlus(type){
+  console.log(countAdult)
   if(type === 'adult'){
   countAdult++;
   ticketCounterAdult.value = countAdult
-  totalPrice = totalSum.innerHTML = countAdult * document.querySelector(".price_item1").textContent + totalPrice
-  console.log(countAdult)
+  totalPrice = totalSum.innerHTML = countAdult * price1.textContent + totalPrice
   }
   if(type === 'kid'){
     countKids++;
@@ -168,7 +170,7 @@ function counterMinus(type){
   totalPrice = totalSum.innerHTML = countAdult * document.querySelector(".price_item1").textContent - totalPrice
   console.log(countAdult)
   }
-  if(type === 'kid'){
+  if(type === 'kids'){
     countKids--;
     ticketCounterKids.value = countKids
     totalPrice = totalSum.innerHTML = countKids * document.querySelector(".price_item2").textContent - totalPrice
