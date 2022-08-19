@@ -23,10 +23,12 @@ class AnimalCardController {
       const admin = req.session?.admin;
       // const newUser = 'Admin';
       const animal = await Animal.findOne({ include: { model: Picture }, where: { id: req.params.id } });
+      const galeryPic = await Picture.findAll({ where: { animal_id: req.params.id } });
       const pictures = animal.Pictures;
+      pictures.splice(5);
       const firstPic = pictures.shift();
       renderTemplate(AnimalCard, {
-        animal, pictures, firstPic, admin,
+        animal, pictures, firstPic, admin, galeryPic
       }, res);
     } catch (error) {
       res.send(`Error =========================> ${error.message}`);

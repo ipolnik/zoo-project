@@ -2,7 +2,7 @@ const React = require('react');
 const Layout = require('./Layout');
 
 module.exports = function AnimalCard({
-  animal, pictures, firstPic, admin,
+  animal, pictures, firstPic, admin, galeryPic
 }) {
   return (
     <Layout admin={admin}>
@@ -70,6 +70,19 @@ module.exports = function AnimalCard({
             <button type="button" className="btn btn-danger del-btn">delete</button>
           </div>
         ) : ('')}
+      </div>
+      <div className="gallery-container">
+        <div className="gallery-table row">
+          {galeryPic?.map((picture) => (
+            <div id={picture.id} className="gallery-picture col-lg-3 col-md-4 col-6 thumb">
+              <img id={picture.id} src={`${picture?.picture_link}`} className="img-fluid img-thumbnail" alt="ups, no image :(" />
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="big-pic-background">
+        <div className="image-container">
+        </div>
       </div>
       <script defer src="/js/animalCardScript.js" />
     </Layout>

@@ -4,6 +4,8 @@ const delButton = document.querySelector('.del-btn');
 const noButton = document.querySelector('.btn-success');
 const removeButton = document.querySelector('.btn-danger');
 const confirmBlock = document.querySelector('.delete-confirm-background');
+const galeryTable = document.querySelector('.gallery-table');
+const imgBlock = document.querySelector('.big-pic-background');
 
 const menu2 = document.getElementById('menu-2');
 const menu1 = document.getElementById('menu-1');
@@ -53,3 +55,24 @@ if (removeButton) {
     }
   });
 }
+
+if (galeryTable) {
+  galeryTable.addEventListener('click', (event) => {
+    if (!event.target.id) {
+      return;
+    }
+    console.log(event.target.id);
+    imgBlock.style.display = 'flex';
+    const img = document.createElement('img');
+    img.src = event.target.src;
+    img.className = 'd-block w-80 img-view';
+    const imgContent = document.querySelector('.image-container');
+    imgContent.appendChild(img);
+  });
+}
+
+imgBlock.addEventListener('click', (event) => {
+  imgBlock.style.display = 'none';
+  const imgContent = document.querySelector('.image-container');
+  imgContent.removeChild(imgContent.firstChild);
+});
