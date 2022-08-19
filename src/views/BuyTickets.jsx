@@ -40,7 +40,7 @@ function Tariffs({ prices }) {
         </td>
     </tr>
     <tr class="table-success" >
-      <th scope="row">{prices.price_name}</th>
+      <th scope="row"></th>
       <td>Детский</td>
       <td><span class="price_item2">{prices.option2}</span> руб.</td>
       <td><div id="quantity">
@@ -54,7 +54,7 @@ function Tariffs({ prices }) {
             </div></td>
     </tr>
     <tr class="table-success" >
-      <th scope="row">{prices.price_name}</th>
+      <th scope="row"></th>
       <td>Пенсионный</td>
       <td><span class="price_item3"> {prices.option3}</span> руб.</td>
       <td><div id="quantity">
@@ -71,7 +71,7 @@ function Tariffs({ prices }) {
       <th scope="row">Итого</th>
       <td></td>
       <td></td>
-      <td><b>К оплате:</b> <span id="total_sum">0</span> руб.</td>
+      <td id="topay"><b>К оплате:</b> <span id="total_sum">0</span> руб.</td>
     </tr>
     </tbody>
     

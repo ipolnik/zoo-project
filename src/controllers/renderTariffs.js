@@ -82,7 +82,7 @@ const sendTicket = (req, res) => {
       subject: 'Билеты в Урюпинский зоопарк', // Subject line
       text: 'Вы забронировали билеты на сумму:', // plain text body
       html: `<b>Вы забронировали билеты.</b>
-      <p>К оплате: ${totalsum}</p>
+      <p>К оплате: ${totalsum} руб.</p>
       <p>Не забудьте показать это письмо на кассе.</p>`, // html body
     });
     console.log('Message sent: %s', info.messageId);

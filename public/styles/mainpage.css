@@ -118,6 +118,7 @@ footer {
 }
 
 #exampleInputLogin1 {
+  margin: 0 auto;
   color: rgb(69, 64, 64);
   border-radius: 8px;
   background-color: rgb(233, 205, 153);
@@ -129,10 +130,10 @@ footer {
   height: 30px;
   line-height: 30px;
   padding: 8px 15px;
-  width: 100%;
+  width: 90%;
 }
-
 #exampleInputPassword1 {
+  margin: 0 auto;
   color: rgb(69, 64, 64);
   border-radius: 8px;
   background-color: rgb(233, 205, 153);
@@ -142,7 +143,7 @@ footer {
   height: 30px;
   line-height: 30px;
   padding: 8px 15px;
-  width: 100%;
+  width: 90%;
 }
 
 #log {
