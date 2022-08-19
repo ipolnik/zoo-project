@@ -13,7 +13,6 @@ module.exports = function Layout({ children, admin }) {
         />
         <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossOrigin="anonymous" />
 
-        
         <link rel="stylesheet" href="/styles/mainpage.css" />
 
         <title>Zoo!</title>
@@ -30,7 +29,7 @@ module.exports = function Layout({ children, admin }) {
                 {admin ? (
                   <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div className="navbar-nav" id="menu-1">
-                      <a className="navbar-brand" href="#">Admin version</a>
+                      <p className="navbar-brand">Admin version</p>
                       <a className="nav-link active" aria-current="page" href="/">Главная страница</a>
                       <a className="nav-link" href="/list">Животные</a>
                       <a className="nav-link" href="/tariffs">Тарифы</a>

@@ -14,71 +14,73 @@ const loginBlock = document.createElement('div');
 links?.addEventListener('click', (e) => {
   e.preventDefault();
   if (e.target.tagName === 'A' && e.target.innerHTML === 'Вход') {
-    loginBlock.style.cssText = `
-    display:flex;
-    justify-content: center;`;
-    loginBlock.classList.add('loginBlock');
-    loginBlock.innerHTML = `
-    <form action="/login" method="POST" id="log">
-        <div class="mb-3">
-          <label htmlFor="exampleInputLogin1" class="form-label"></label>
-          <input name="login" type="text" class="form-control" placeholder="Login" id="exampleInputLogin1" aria-describedby="emailHelp" />
-        </div>
-        <div class="mb-3">
-          <label htmlFor="exampleInputPassword1" class="form-label"></label>
-          <input name="password" type="password" class="form-control" placeholder="Password" id="exampleInputPassword1" />
-        </div>
-        <button type="submit" class="btn btn-primary" id="submit">Войти</button>
-    `;
-    block.append(loginBlock);
+    window.location.assign('/login');
+    // loginBlock.style.cssText = `
+    // display:flex;
+    // justify-content: center;`;
+    // loginBlock.classList.add('loginBlock');
+    // loginBlock.innerHTML = `
+    // <form action="/login" method="POST" id="log">
+    //     <div class="mb-3">
+    //       <label htmlFor="exampleInputLogin1" class="form-label"></label>
+    //       <input name="login" type="text" class="form-control" placeholder="Login" id="exampleInputLogin1" aria-describedby="emailHelp" />
+    //     </div>
+    //     <div class="mb-3">
+    //       <label htmlFor="exampleInputPassword1" class="form-label"></label>
+    //       <input name="password" type="password" class="form-control" placeholder="Password" id="exampleInputPassword1" />
+    //     </div>
+    //     <button type="submit" class="btn btn-primary" id="submit">Войти</button>
+    //     </form>
+    // `;
+    // block.append(loginBlock);
 
-    img.style.margin = '160px 0 0 0';
+    // img.style.margin = '160px 0 0 0';
 
-    // * меняем аттрибут active у кнопки входа
-    const { lastElementChild } = menu2;
-    const { firstChild } = menu2;
-    lastElementChild.className = 'nav-link active';
-    firstChild.className = 'nav-link';
+    // // * меняем аттрибут active у кнопки входа
+    // const { lastElementChild } = menu2;
+    // const { firstChild } = menu2;
+    // lastElementChild.className = 'nav-link active';
+    // firstChild.className = 'nav-link';
 
-    const submit = document.querySelector('#log');
-    submit?.addEventListener('submit', async (event) => {
-      event.preventDefault();
-      const login = event.target.login.value;
-      const password = event.target.password.value;
-      const obj = { login, password };
-      const response = await fetch('/login', {
-        method: 'POST',
-        headers: {
-          'Content-type': 'application/json',
-        },
-        body: JSON.stringify(obj),
-      });
-      if (response.status === 200) {
-        img.style.margin = '0 0 0 0';
-        const adminBlock = document.createElement('div');
-        adminBlock.classList.add('adminBlock');
+    // const submit = document.querySelector('#log');
+    // submit?.addEventListener('submit', async (event) => {
+    //   event.preventDefault();
+    //   const login = event.target.login.value;
+    //   const password = event.target.password.value;
+    //   const obj = { login, password };
+    //   const response = await fetch('/login', {
+    //     method: 'POST',
+    //     headers: {
+    //       'Content-type': 'application/json',
+    //     },
+    //     body: JSON.stringify(obj),
+    //   });
+    //   if (response.status === 200) {
+    //     img.style.margin = '0 0 0 0';
+    //     const adminBlock = document.createElement('div');
+    //     adminBlock.classList.add('adminBlock');
 
-        adminBlock.innerHTML = `<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav" id="menu-1">
-        <a class="navbar-brand" href="#">Admin version</a>
-          <a class="nav-link active" aria-current="page" href="/">Главная страница</a>
-          <a class="nav-link" href="/animals">Животные</a>
-          <a class="nav-link" href="/tariffs">Тарифы</a>
-          <a class="nav-link" href="/logout">Выйти</a>
-        </div>`;
-        navbar.removeChild(menu2);
-        navbar.append(adminBlock);
-        block.removeChild(loginBlock);
+    //     adminBlock.innerHTML = `<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    //     <div class="navbar-nav" id="menu-1">
+    //     <a class="navbar-brand" href="#">Admin version</a>
+    //       <a class="nav-link active" aria-current="page" href="/">Главная страница</a>
+    //       <a class="nav-link" href="/animals">Животные</a>
+    //       <a class="nav-link" href="/tariffs">Тарифы</a>
+    //       <a class="nav-link" href="/logout">Выйти</a>
+    //     </div>`;
+    //     navbar.removeChild(menu2);
+    //     navbar.append(adminBlock);
+    //     block.removeChild(loginBlock);
 
-        if (error) {
-          block.removeChild(error);
-        }
-      } else if (response.status === 304) {
-        error.innerHTML = `
-        <p>Неправильно введен логин или пароль</p>`;
-        block.append(error);
-      }
-    });
+    //     if (error) {
+    //       block.removeChild(error);
+    //     }
+    //   } else if (response.status === 304) {
+    //     error.innerHTML = `
+    //     <p>Неправильно введен логин или пароль</p>`;
+    //     block.append(error);
+    //   }
+    // });
   }
   if (e.target.tagName === 'A' && e.target.innerHTML === 'Главная страница') {
     if (menu2) {
