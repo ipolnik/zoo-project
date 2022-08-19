@@ -20,7 +20,7 @@ module.exports = function EditAnimalCard({
       </div>
       <div className="div-animal-card-edit">
         <h3>Редактор карты животного</h3>
-        <div className="border border-primary p-2 border-opacity-25 rounded-top">
+        <div className="border border-2 border-warning p-2 border-opacity-50 rounded-top">
           <div className="mini-photos-box">
             <h5>Добавление / удаление фото</h5>
             <div className="mini-photos">
@@ -41,7 +41,7 @@ module.exports = function EditAnimalCard({
             </div>
           </div>
         </div>
-        <div className="form-box border border-top-0 p-2 border-primary border-opacity-25 rounded-bottom">
+        <div className="form-box border border-2 border-top-0 p-2 border-warning border-opacity-50 rounded-bottom">
           <h5>Редактирование информации о животном</h5>
           <form className="editForm" action="#" method="post">
             <div>

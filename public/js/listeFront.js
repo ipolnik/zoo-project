@@ -39,8 +39,8 @@ adminSet?.addEventListener('click', async (e) => {
     const result = await response.json();
     console.log(result);
     if (result.delete === 'ok') {
-      console.log(e.target.parentNode);
-      adminSet.removeChild(e.target.parentNode);
+      console.log(e.target.parentNode.parentNode);
+      adminSet.removeChild(e.target.parentNode.parentNode);
     }
   } else if (e.target.tagName === 'BUTTON' && e.target.className === 'btn btn-success') {
     const idAnimal = e.target.id;

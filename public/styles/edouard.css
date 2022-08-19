@@ -112,3 +112,15 @@
   color: rgb(94, 95, 95);
   margin: 10px 0;
 }
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5% 5%;
+  flex-wrap: wrap;
+}
+
+button {
+  min-width: 100px;
+}
