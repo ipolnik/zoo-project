@@ -38,7 +38,7 @@ function List({ animals, admin }) {
           {animals.map((animal) => (
             <div className="card animate__animated animate__pulse">
               <div className="img-div">
-                <img className="card-img-top" src={animal.Pictures[0]?.picture_link} alt="Card cap" id={animal.id} />
+                {animal.Pictures.length > 0 ? (<img className="card-img-top" src={animal.Pictures[0]?.picture_link} alt="Card cap" id={animal.id} />) : ('')}
               </div>
               <h3 className="card-title" id={animal.id}>{animal.name}</h3>
               {/* <h5 className="card-title" id={animal.id}>{animal.breed}</h5> */}
