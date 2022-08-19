@@ -196,7 +196,7 @@ function counterMinus(type){
 }
 
 const form = document.querySelector('.mainForm');
-form.addEventListener('submit', async (event) => {
+form?.addEventListener('submit', async (event) => {
   event.preventDefault();
   const email = event.target.email.value
   const totalsum = document.querySelector("#total_sum").textContent;

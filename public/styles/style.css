@@ -112,3 +112,8 @@ td {
 #topay{
     width: 240px;
 }
+@media (max-width: 855px) {
+    #buybutton {
+      margin: 15px 0 0 30px;
+    }
+  }

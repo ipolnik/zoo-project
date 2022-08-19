@@ -79,7 +79,7 @@ function Tariffs({ prices }) {
 </table>
 </div>
 <div className="emailinput">
-        <b>Введите ваш Email билеты придут к вам на почту: </b>
+       <b>Введите ваш Email. Билеты придут к вам на почту: </b>
         <form method="POST" className="mainForm">
           <input className="email" type="text" placeholder="Введите ваш email" name="email" />
           <button className="btn btn-success" id="buybutton" type="submit">Купить</button>
