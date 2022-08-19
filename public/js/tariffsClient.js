@@ -76,9 +76,11 @@ mainDiv?.addEventListener('click', async (event) => {
     });
     console.log('test');
     if (response.status === 200) {
+      console.log('delete1 ==============>', event.target, event.currentTarget)
       const deletedElement = document.getElementById(event.target.id);
+      console.log('delete2 ==============>', event.target.parentNode.parentNode.parentNode.parentNode)
       console.log('Parent node=>', deletedElement);
-      mainDiv.removeChild(deletedElement);
+      mainDiv.removeChild(event.target.parentNode.parentNode.parentNode.parentNode);
     }
   }
 });
